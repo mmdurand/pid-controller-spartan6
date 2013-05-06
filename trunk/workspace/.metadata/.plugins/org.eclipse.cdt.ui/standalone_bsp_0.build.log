@@ -1,2 +1,41 @@
 make -k all 
-'Finished building libraries'
+libgen -hw ../embsys_hw_platform/system.xml\
+	       -lp C:/My_Area/project1/ECE544_Repository_14_4\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.4 Build EDK_P.49d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../embsys_hw_platform/system.xml -lp
+C:/My_Area/project1/ECE544_Repository_14_4 -pe microblaze_0 -log libgen.log
+system.mss 
+
+ERROR:EDK:3323 -
+   C:\544projects\pid-controller\workspace\standalone_bsp_0\system.mss line 45 -
+   Cannot find MDD file n3eif_v2_1_0.mdd for the driver n3eif 1.00.a
+INFO:EDK:1040 - Directories Searched :
+  -
+C:\544projects\pid-controller\workspace\standalone_bsp_0\drivers/n3eif_v1_00_a/d
+ata
+  -
+C:\544projects\pid-controller\workspace\standalone_bsp_0\pcores/n3eif_v1_00_a/da
+ta
+  - C:\My_Area\project1\ECE544_Repository_14_4\drivers/n3eif_v1_00_a/data
+  - C:\My_Area\project1\ECE544_Repository_14_4\pcores/n3eif_v1_00_a/data
+  - C:\Xilinx\14.4\ISE_DS\EDK\sw\lib\drivers/n3eif_v1_00_a/data
+  - C:\Xilinx\14.4\ISE_DS\EDK\sw\lib\pcores/n3eif_v1_00_a/data
+  - C:\Xilinx\14.4\ISE_DS\EDK\sw\XilinxProcessorIPLib\drivers/n3eif_v1_00_a/data
+  - C:\Xilinx\14.4\ISE_DS\EDK\sw\XilinxProcessorIPLib\pcores/n3eif_v1_00_a/data
+  - C:\Xilinx\14.4\ISE_DS\EDK\sw\ThirdParty\drivers/n3eif_v1_00_a/data
+  - C:\Xilinx\14.4\ISE_DS\EDK\sw\ThirdParty\pcores/n3eif_v1_00_a/data
+INFO:EDK:772 - Check the following for possible causes of not finding MDD:
+  - If DRIVER_VER is specified in MSS, it must follow literal form X.YY.Z
+  - There is no driver with given name
+  - Driver exists but not that version
+  - Driver and version (directory) exist but no MDD is available
+
+ERROR:EDK:1204 - Errors occured while creating Software System.
+make: *** [microblaze_0/lib/libxil.a] Error 2
+make: Target `all' not remade because of errors.

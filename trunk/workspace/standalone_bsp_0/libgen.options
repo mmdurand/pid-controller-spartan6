@@ -1,3 +1,0 @@
-PROCESSOR=microblaze_0
-REPOSITORIES=-lp C:/My_Area/project1/ECE544_Repository_14_4
-HWSPEC=../embsys_hw_platform/system.xml
