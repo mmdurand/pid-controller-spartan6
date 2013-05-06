@@ -1,0 +1,21 @@
+!SESSION 2013-05-05 22:22:36.284 -----------------------------------------------
+eclipse.buildId=Release 14.4 Build SDK_P.49d
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-05-05 22:24:19.700
+!MESSAGE Indexed 'standalone_bsp_0' (0 sources, 8 headers) in 0.97 sec: 0 declarations; 0 references; 8 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-05-05 22:25:40.188
+!MESSAGE Indexed 'PID_controller' (0 sources, 21 headers) in 0.27 sec: 143 declarations; 311 references; 3 unresolved inclusions; 0 syntax errors; 1 unresolved names (0.22%)
+!SESSION 2013-05-05 22:39:44.210 -----------------------------------------------
+eclipse.buildId=Release 14.4 Build SDK_P.49d
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-05-05 22:39:53.303
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
