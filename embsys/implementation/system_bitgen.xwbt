@@ -1,0 +1,7 @@
+INFILE=X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\implementation\system.ncd
+OUTFILE=X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\implementation\system.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\implementation
+LICENSE=WebPack
+USER_INFO=__0_0_0

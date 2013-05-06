@@ -1,0 +1,150 @@
+#  Nexys 3 Board
+Net fpga_0_RS232_Uart_1_RX_pin LOC=N17  |  IOSTANDARD=LVCMOS33;
+Net fpga_0_RS232_Uart_1_TX_pin LOC=N18  |  IOSTANDARD=LVCMOS33;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<22> LOC=K18  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<21> LOC=K17  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<20> LOC=J18  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<19> LOC=J16  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<18> LOC=G18  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<17> LOC=G16  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<16> LOC=H16  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<15> LOC=H15  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<14> LOC=H14  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<13> LOC=H13  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<12> LOC=F18  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<11> LOC=F17  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<10> LOC=K13  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<9> LOC=K12  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<8> LOC=E18  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<7> LOC=E16  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<6> LOC=G13  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<5> LOC=H12  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<4> LOC=D18  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<3> LOC=D17  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<2> LOC=G14  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<1> LOC=F14  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_ADDR_pin<0> LOC=C18  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_DQ_pin<15> LOC=R13  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_DQ_pin<14> LOC=T14  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_DQ_pin<13> LOC=V14  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_DQ_pin<12> LOC=U5  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_DQ_pin<11> LOC=V5  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_DQ_pin<10> LOC=R3  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_DQ_pin<9> LOC=T3  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_DQ_pin<8> LOC=R5  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_DQ_pin<7> LOC=N5  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_DQ_pin<6> LOC=P6  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_DQ_pin<5> LOC=P12  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_DQ_pin<4> LOC=U13  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_DQ_pin<3> LOC=V13  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_DQ_pin<2> LOC=U10  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_DQ_pin<1> LOC=R8  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_DQ_pin<0> LOC=T8  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_MEM_OEN_pin LOC=L18  |  IOSTANDARD = LVCMOS33  |  DRIVE=2  |  PULLUP;
+Net fpga_0_mem_bus_mux_0_MEM_WEN_pin LOC=M16  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_RAM_CEN_O_pin LOC=L15  |  IOSTANDARD = LVCMOS33  |  DRIVE=2  |  PULLUP;
+Net fpga_0_mem_bus_mux_0_RAM_BEN_O_pin<1> LOC=K16  |  IOSTANDARD = LVCMOS33  |  DRIVE=2  |  PULLDOWN;
+Net fpga_0_mem_bus_mux_0_RAM_BEN_O_pin<0> LOC=K15  |  IOSTANDARD = LVCMOS33  |  DRIVE=2  |  PULLDOWN;
+Net fpga_0_mem_bus_mux_0_FLASH_ADDR_pin<5> LOC=F15  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_FLASH_ADDR_pin<6> LOC=F16  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_FLASH_ADDR_pin<7> LOC=C17  |  IOSTANDARD = LVCMOS33  |  DRIVE=2;
+Net fpga_0_mem_bus_mux_0_FLASH_CEN_O_pin LOC=L17  |  IOSTANDARD = LVCMOS33  |  DRIVE=2  |  PULLUP;
+Net fpga_0_mem_bus_mux_0_FLASH_RPN_O_pin LOC=T4  |  IOSTANDARD = LVCMOS33  |  DRIVE=2  |  PULLUP;
+Net fpga_0_mem_bus_mux_0_QUAD_SPI_C_O_pin LOC = R15  |  IOSTANDARD = LVCMOS33  |  PULLUP;
+Net fpga_0_mem_bus_mux_0_QUAD_SPI_S_O_pin LOC = V3  |  IOSTANDARD = LVCMOS33  |  PULLUP;
+Net fpga_0_mem_bus_mux_0_MOSI_QUAD_SPI_pin LOC = T13  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_clk_1_sys_clk_pin TNM_NET = sys_clk_pin;
+
+#######################
+## Nexys3 board signals
+#######################
+
+## System clock and reset
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100000 kHz;
+Net fpga_0_clk_1_sys_clk_pin LOC=V10  |  IOSTANDARD=LVCMOS33;
+Net fpga_0_rst_1_sys_rst_pin TIG;
+Net fpga_0_rst_1_sys_rst_pin LOC=B8  |  IOSTANDARD=LVCMOS33;
+
+## RS232 UART signals
+Net fpga_0_RS232_Uart_1_RX_pin LOC=N17  |  IOSTANDARD=LVCMOS33;
+Net fpga_0_RS232_Uart_1_TX_pin LOC=N18  |  IOSTANDARD=LVCMOS33;
+Net fpga_0_clk_1_sys_clk_pin TNM_NET = sys_clk_pin;
+ 
+## Leds
+Net "n3eif_0_leds_out_pin<0>" LOC = U16 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L2P_CMPCLK, Sch name = LD0
+Net "n3eif_0_leds_out_pin<1>" LOC = V16 |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L2N_CMPMOSI, Sch name = LD1
+Net "n3eif_0_leds_out_pin<2>" LOC = U15 |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L5P, Sch name = LD2
+Net "n3eif_0_leds_out_pin<3>" LOC = V15 |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L5N, Sch name = LD3
+Net "n3eif_0_leds_out_pin<4>" LOC = M11 |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L15P, Sch name = LD4
+Net "n3eif_0_leds_out_pin<5>" LOC = N11 |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L15N, Sch name = LD5
+Net "n3eif_0_leds_out_pin<6>" LOC = R11 |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L16P, Sch name = LD6
+Net "n3eif_0_leds_out_pin<7>" LOC = T11 |  IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L16N_VREF, Sch name = LD7
+
+## Switches
+Net "n3eif_0_sw_pin<0>" LOC = T10 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L29N_GCLK2, Sch name = SW0
+Net "n3eif_0_sw_pin<1>" LOC = T9 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L32P_GCLK29, Sch name = SW1
+Net "n3eif_0_sw_pin<2>" LOC = V9 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L32N_GCLK28, Sch name = SW2
+Net "n3eif_0_sw_pin<3>" LOC = M8 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L40P, Sch name = SW3
+
+## Buttons
+## btns (btn_center) is the system reset pin and is defined earlier, btnd (btn_south) is not connected
+Net "n3eif_0_btn_north_pin" LOC = A8 | IOSTANDARD = LVCMOS33; #Bank = 0, pin name = IO_L33N, Sch name = BTNU
+Net "n3eif_0_btn_west_pin" LOC = C4 | IOSTANDARD = LVCMOS33; #Bank = 0, pin name = IO_L1N_VREF, Sch name = BTNL
+Net "n3eif_0_btn_east_pin" LOC = D9 | IOSTANDARD = LVCMOS33; # Bank = 0, pin name = IO_L34P_GCLK19, Sch name = BTNR
+
+#Net "btnd" LOC = C9 | IOSTANDARD = LVCMOS33; #Bank = 0, pin name = IO_L34N_GCLK18, Sch name = BTND
+#Net "btns" LOC = B8 | IOSTANDARD = LVCMOS33; #Bank = 0, pin name = IO_L33P, Sch name = BTNS
+
+########################################
+## 12 pin Expanasion (Pmod) connectors
+########################################
+
+##JA - PmodCLP data bus for this system
+Net "n3eif_0_lcd_d_pin<0>" LOC = T12 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L19P, Sch name = JA1
+Net "n3eif_0_lcd_d_pin<1>" LOC = V12 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L19N, Sch name = JA2  
+Net "n3eif_0_lcd_d_pin<2>" LOC = N10 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L20P, Sch name = JA3
+Net "n3eif_0_lcd_d_pin<3>" LOC = P11 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L20N, Sch name = JA4
+Net "n3eif_0_lcd_d_pin<4>" LOC = M10 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L22P, Sch name = JA7
+Net "n3eif_0_lcd_d_pin<5>" LOC = N9 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L22N, Sch name = JA8
+Net "n3eif_0_lcd_d_pin<6>" LOC = U11 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L23P, Sch name = JA9
+Net "n3eif_0_lcd_d_pin<7>" LOC = V11 | IOSTANDARD = LVCMOS33; #Bank = 2, pin name = IO_L23N, Sch name = JA10
+
+##JB - PmodCLP control signals for this system
+## PmodCLP control signals are on the botton row 
+## Top row is connected to GPIO_O for debug
+Net "xps_gpio_0_GPIO_IO_O_pin<0>" LOC = K2 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L38P_M3DQ2, Sch name = JB1
+Net "xps_gpio_0_GPIO_IO_O_pin<1>" LOC = K1 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L38N_M3DQ3, Sch name = JB2
+Net "xps_gpio_0_GPIO_IO_O_pin<2>" LOC = L4 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L39P_M3LDQS, Sch name = JB3
+Net "xps_gpio_0_GPIO_IO_O_pin<3>" LOC = L3 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L39N_M3LDQSN, Sch name = JB4
+
+Net "n3eif_0_lcd_rs_pin" LOC = J3 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L40P_M3DQ6, Sch name = JB7
+Net "n3eif_0_lcd_rw_pin" LOC = J1 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L40N_M3DQ7, Sch name = JB8
+Net "n3eif_0_lcd_e_pin" LOC = K3 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L42N_GCLK24_M3LDM, Sch name = JB9
+
+#Net "JB<7>" LOC = K5 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L43N_GCLK22_IRDY2_M3CASN, Sch name = JB10
+
+##JC - PmodENC signals for this system
+## PmodENC signals are on the bottom row.  Rotary switch is not connected
+## Top row is connected to GPIO-O for debug
+Net "xps_gpio_0_GPIO_IO_O_pin<4>" LOC = H3 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L44N_GCLK20_M3A6, Sch name = JC1
+Net "xps_gpio_0_GPIO_IO_O_pin<5>" LOC = L7 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L45P_M3A3, Sch name = JC2
+Net "xps_gpio_0_GPIO_IO_O_pin<6>" LOC = K6 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L45N_M3ODT, Sch name = JC3
+Net "xps_gpio_0_GPIO_IO_O_pin<7>" LOC = G3 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L46P_M3CLK, Sch name = JC4
+
+Net "n3eif_0_rotary_b_pin" LOC = G1 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L46N_M3CLKN, Sch name = JC7
+Net "n3eif_0_rotary_a_pin" LOC = J7 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L47P_M3A0, Sch name = JC8
+Net "n3eif_0_rotary_press_pin" LOC = J6 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L47N_M3A1, Sch name = JC9
+
+#Net "JC<7>" LOC = F2 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L48P_M3BA0, Sch name = JC10
+
+##JD - PmodCtlSys (Project 2 Control System) signals for this system
+## {DOUT, CS#/SHDN, DIN, CLK} are on the top row, PWMOUT is on the bottom row.  These are the schematic names
+Net "xps_spi_0_MISO_I_pin" LOC = G11 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L40P, Sch name = JD1
+Net "xps_spi_0_SS_O_pin" LOC = F10 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L40N, Sch name = JD2
+Net "xps_spi_0_MOSI_O_pin" LOC = F11 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L42P, Sch name = JD3
+Net "xps_spi_0_SCK_O_pin" LOC = E11 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L42N, Sch name = JD4
+Net "xps_timer_0_PWM0_pin" LOC = D12 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L47P, Sch name = JD7
+
+#Net "JD<5>" LOC = C12 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L47N, Sch name = JD8
+#Net "JD<6>" LOC = F12 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L51P, Sch name = JD9
+#Net "JD<7>" LOC = E12 | IOSTANDARD = LVCMOS33; #Bank = 3, pin name = IO_L51N, Sch name = JD10

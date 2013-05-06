@@ -1,0 +1,2 @@
+vhdl mem_bus_mux_v1_00_a X:\Documents\Embedded_Systems_Xilinx\project1_release_r1.0\project1_release\ECE544_Repository_14_4\Digilent\pcores\mem_bus_mux_v1_00_a/hdl/vhdl/mem_bus_mux.vhd
+vhdl work ../hdl/system_mem_bus_mux_0_wrapper.vhd

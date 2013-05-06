@@ -1,0 +1,350 @@
+Release 14.4 - xst P.49d (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\synthesis\xst_temp_dir\
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.36 secs
+ 
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_fit_timer_0_wrapper_xst.prj"
+Verilog Include Directory          : {"X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\pcores\" "X:\Documents\Embedded_Systems_Xilinx\project1_release_r1.0\project1_release\ECE544_Repository_14_4\Digilent\pcores\" "X:\Documents\Embedded_Systems_Xilinx\project1_release_r1.0\project1_release\ECE544_Repository_14_4\MyProcessorIPLib\pcores\" "C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+
+---- Target Parameters
+Target Device                      : xc6slx16csg324-3
+Output File Name                   : "../implementation/system_fit_timer_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : system_fit_timer_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fit_timer_v1_01_c/hdl/vhdl/divide_part.vhd" into library fit_timer_v1_01_c
+Parsing entity <Divide_part>.
+Parsing architecture <VHDL_RTL> of entity <divide_part>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fit_timer_v1_01_c/hdl/vhdl/fit_timer.vhd" into library fit_timer_v1_01_c
+Parsing entity <FIT_timer>.
+Parsing architecture <VHDL_RTL> of entity <fit_timer>.
+Parsing VHDL file "X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\hdl\system_fit_timer_0_wrapper.vhd" into library work
+Parsing entity <system_fit_timer_0_wrapper>.
+Parsing architecture <STRUCTURE> of entity <system_fit_timer_0_wrapper>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <system_fit_timer_0_wrapper> (architecture <STRUCTURE>) from library <work>.
+
+Elaborating entity <FIT_timer> (architecture <VHDL_RTL>) with generics from library <fit_timer_v1_01_c>.
+WARNING:HDLCompiler:746 - "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fit_timer_v1_01_c/hdl/vhdl/fit_timer.vhd" Line 325: Range is empty (null range)
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <system_fit_timer_0_wrapper>.
+    Related source file is "X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\hdl\system_fit_timer_0_wrapper.vhd".
+    Summary:
+	no macro.
+Unit <system_fit_timer_0_wrapper> synthesized.
+
+Synthesizing Unit <FIT_timer>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/fit_timer_v1_01_c/hdl/vhdl/fit_timer.vhd".
+        C_FAMILY = "spartan6"
+        C_NO_CLOCKS = 13333
+        C_INACCURACY = 0
+        C_EXT_RESET_HIGH = 1
+    Found 1-bit register for signal <Using_Counter.Interrupt_i>.
+    Found 14-bit register for signal <Using_Counter.Count>.
+    Summary:
+	inferred  15 D-type flip-flop(s).
+Unit <FIT_timer> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 2
+ 1-bit register                                        : 1
+ 14-bit register                                       : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 15
+ Flip-Flops                                            : 15
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <system_fit_timer_0_wrapper> ...
+
+Optimizing unit <FIT_timer> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block system_fit_timer_0_wrapper, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 15
+ Flip-Flops                                            : 15
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : system_fit_timer_0_wrapper.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 46
+#      GND                         : 1
+#      INV                         : 15
+#      LUT2                        : 1
+#      LUT3                        : 1
+#      MUXCY_L                     : 14
+#      XORCY                       : 14
+# FlipFlops/Latches                : 15
+#      FD                          : 1
+#      FDR                         : 9
+#      FDS                         : 5
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              15  out of  18224     0%  
+ Number of Slice LUTs:                   17  out of   9112     0%  
+    Number used as Logic:                17  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     20
+   Number with an unused Flip Flop:       5  out of     20    25%  
+   Number with an unused LUT:             3  out of     20    15%  
+   Number of fully used LUT-FF pairs:    12  out of     20    60%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                           3
+ Number of bonded IOBs:                   0  out of    232     0%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+----------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                  | Load  |
+-----------------------------------+----------------------------------------+-------+
+Clk                                | NONE(fit_timer_0/Using_Counter.Count_0)| 15    |
+-----------------------------------+----------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.311ns (Maximum Frequency: 302.065MHz)
+   Minimum input arrival time before clock: 1.695ns
+   Maximum output required time after clock: 0.447ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 3.311ns (frequency: 302.065MHz)
+  Total number of paths / destination ports: 239 / 29
+-------------------------------------------------------------------------
+Delay:               3.311ns (Levels of Logic = 16)
+  Source:            fit_timer_0/Using_Counter.Count_13 (FF)
+  Destination:       fit_timer_0/Using_Counter.Interrupt_i (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: fit_timer_0/Using_Counter.Count_13 to fit_timer_0/Using_Counter.Interrupt_i
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  fit_timer_0/Using_Counter.Count_13 (fit_timer_0/Using_Counter.Count_13)
+     INV:I->O              1   0.206   0.000  fit_timer_0/Using_Counter.New_Cnt<13>1_INV_0 (fit_timer_0/Using_Counter.New_Cnt<13>)
+     MUXCY_L:S->LO         1   0.172   0.000  fit_timer_0/Using_Counter.All_Bits[13].MUXCY_L_I1 (fit_timer_0/Using_Counter.Carry<13>)
+     MUXCY_L:CI->LO        1   0.019   0.000  fit_timer_0/Using_Counter.All_Bits[12].MUXCY_L_I1 (fit_timer_0/Using_Counter.Carry<12>)
+     MUXCY_L:CI->LO        1   0.019   0.000  fit_timer_0/Using_Counter.All_Bits[11].MUXCY_L_I1 (fit_timer_0/Using_Counter.Carry<11>)
+     MUXCY_L:CI->LO        1   0.019   0.000  fit_timer_0/Using_Counter.All_Bits[10].MUXCY_L_I1 (fit_timer_0/Using_Counter.Carry<10>)
+     MUXCY_L:CI->LO        1   0.019   0.000  fit_timer_0/Using_Counter.All_Bits[9].MUXCY_L_I1 (fit_timer_0/Using_Counter.Carry<9>)
+     MUXCY_L:CI->LO        1   0.019   0.000  fit_timer_0/Using_Counter.All_Bits[8].MUXCY_L_I1 (fit_timer_0/Using_Counter.Carry<8>)
+     MUXCY_L:CI->LO        1   0.019   0.000  fit_timer_0/Using_Counter.All_Bits[7].MUXCY_L_I1 (fit_timer_0/Using_Counter.Carry<7>)
+     MUXCY_L:CI->LO        1   0.019   0.000  fit_timer_0/Using_Counter.All_Bits[6].MUXCY_L_I1 (fit_timer_0/Using_Counter.Carry<6>)
+     MUXCY_L:CI->LO        1   0.019   0.000  fit_timer_0/Using_Counter.All_Bits[5].MUXCY_L_I1 (fit_timer_0/Using_Counter.Carry<5>)
+     MUXCY_L:CI->LO        1   0.019   0.000  fit_timer_0/Using_Counter.All_Bits[4].MUXCY_L_I1 (fit_timer_0/Using_Counter.Carry<4>)
+     MUXCY_L:CI->LO        1   0.019   0.000  fit_timer_0/Using_Counter.All_Bits[3].MUXCY_L_I1 (fit_timer_0/Using_Counter.Carry<3>)
+     MUXCY_L:CI->LO        1   0.019   0.000  fit_timer_0/Using_Counter.All_Bits[2].MUXCY_L_I1 (fit_timer_0/Using_Counter.Carry<2>)
+     MUXCY_L:CI->LO        1   0.019   0.000  fit_timer_0/Using_Counter.All_Bits[1].MUXCY_L_I1 (fit_timer_0/Using_Counter.Carry<1>)
+     MUXCY_L:CI->LO        1   0.213   0.579  fit_timer_0/Using_Counter.All_Bits[0].MUXCY_L_I1 (fit_timer_0/Using_Counter.Carry<0>)
+     INV:I->O              1   0.206   0.579  fit_timer_0/Using_Counter.Carry[0]_INV_15_o1_INV_0 (fit_timer_0/Using_Counter.Carry[0]_INV_15_o)
+     FDR:D                     0.102          fit_timer_0/Using_Counter.Interrupt_i
+    ----------------------------------------
+    Total                      3.311ns (1.574ns logic, 1.737ns route)
+                                       (47.5% logic, 52.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 15 / 15
+-------------------------------------------------------------------------
+Offset:              1.695ns (Levels of Logic = 1)
+  Source:            Rst (PAD)
+  Destination:       fit_timer_0/Using_Counter.Count_0 (FF)
+  Destination Clock: Clk rising
+
+  Data Path: Rst to fit_timer_0/Using_Counter.Count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT2:I0->O           14   0.203   0.957  fit_timer_0/Using_Counter.rst_cnt1 (fit_timer_0/Using_Counter.rst_cnt)
+     FDR:R                     0.430          fit_timer_0/Using_Counter.Interrupt_i
+    ----------------------------------------
+    Total                      1.695ns (0.738ns logic, 0.957ns route)
+                                       (43.5% logic, 56.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.447ns (Levels of Logic = 0)
+  Source:            fit_timer_0/Using_Counter.Interrupt_i (FF)
+  Destination:       Interrupt (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: fit_timer_0/Using_Counter.Interrupt_i to Interrupt
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.000  fit_timer_0/Using_Counter.Interrupt_i (fit_timer_0/Using_Counter.Interrupt_i)
+    ----------------------------------------
+    Total                      0.447ns (0.447ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |    3.311|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.36 secs
+ 
+--> 
+
+Total memory usage is 148944 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
