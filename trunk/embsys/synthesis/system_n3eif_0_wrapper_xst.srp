@@ -1,0 +1,2109 @@
+Release 14.4 - xst P.49d (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\synthesis\xst_temp_dir\
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.36 secs
+ 
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_n3eif_0_wrapper_xst.prj"
+Verilog Include Directory          : {"X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\pcores\" "X:\Documents\Embedded_Systems_Xilinx\project1_release_r1.0\project1_release\ECE544_Repository_14_4\Digilent\pcores\" "X:\Documents\Embedded_Systems_Xilinx\project1_release_r1.0\project1_release\ECE544_Repository_14_4\MyProcessorIPLib\pcores\" "C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+
+---- Target Parameters
+Target Device                      : xc6slx16csg324-3
+Output File Name                   : "../implementation/system_n3eif_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : system_n3eif_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/verilog/user_logic.v" into library n3eif_v1_00_a
+Parsing module <user_logic>.
+Analyzing Verilog file "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/verilog/kcpsm6.v" into library n3eif_v1_00_a
+Parsing module <kcpsm6>.
+Analyzing Verilog file "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/verilog/n3_if_core.v" into library n3eif_v1_00_a
+Parsing module <n3_if_core>.
+Analyzing Verilog file "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/verilog/pblaze_if.v" into library n3eif_v1_00_a
+Parsing module <pblaze_if>.
+Analyzing Verilog file "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/verilog/pblaze_simple_pic.v" into library n3eif_v1_00_a
+Parsing module <pblaze_simple_pic>.
+Analyzing Verilog file "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/verilog/rotary_filter.v" into library n3eif_v1_00_a
+Parsing module <rotary_filter>.
+Analyzing Verilog file "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/verilog/n3ifpgm.v" into library n3eif_v1_00_a
+Parsing module <n3ifpgm>.
+Parsing module <jtag_loader_6>.
+Analyzing Verilog file "X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\hdl\system_n3eif_0_wrapper.v" into library work
+Parsing module <system_n3eif_0_wrapper>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family.vhd" into library proc_common_v3_00_a
+Parsing package <family>.
+Parsing package body <family>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family_support.vhd" into library proc_common_v3_00_a
+Parsing package <family_support>.
+Parsing package body <family_support>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/coregen_comp_defs.vhd" into library proc_common_v3_00_a
+Parsing package <coregen_comp_defs>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/common_types_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <Common_Types>.
+Parsing package body <Common_Types>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/proc_common_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <proc_common_pkg>.
+Parsing package body <proc_common_pkg>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/conv_funs_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <conv_funs_pkg>.
+Parsing package body <conv_funs_pkg>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <ipif_pkg>.
+Parsing package body <ipif_pkg>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/async_fifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <async_fifo_fg>.
+Parsing architecture <implementation> of entity <async_fifo_fg>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/sync_fifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <sync_fifo_fg>.
+Parsing architecture <implementation> of entity <sync_fifo_fg>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/basic_sfifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <basic_sfifo_fg>.
+Parsing architecture <implementation> of entity <basic_sfifo_fg>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/blk_mem_gen_wrapper.vhd" into library proc_common_v3_00_a
+Parsing entity <blk_mem_gen_wrapper>.
+Parsing architecture <implementation> of entity <blk_mem_gen_wrapper>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/addsub.vhd" into library proc_common_v3_00_a
+Parsing entity <addsub>.
+Parsing architecture <imp> of entity <addsub>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <counter_bit>.
+Parsing architecture <imp> of entity <counter_bit>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter.vhd" into library proc_common_v3_00_a
+Parsing entity <Counter>.
+Parsing architecture <imp> of entity <counter>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr.vhd" into library proc_common_v3_00_a
+Parsing entity <direct_path_cntr>.
+Parsing architecture <imp> of entity <direct_path_cntr>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr_ai.vhd" into library proc_common_v3_00_a
+Parsing entity <direct_path_cntr_ai>.
+Parsing architecture <imp> of entity <direct_path_cntr_ai>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/down_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <down_counter>.
+Parsing architecture <simulation> of entity <down_counter>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/eval_timer.vhd" into library proc_common_v3_00_a
+Parsing entity <eval_timer>.
+Parsing architecture <imp> of entity <eval_timer>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/inferred_lut4.vhd" into library proc_common_v3_00_a
+Parsing entity <inferred_lut4>.
+Parsing architecture <implementation> of entity <inferred_lut4>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_steer.vhd" into library proc_common_v3_00_a
+Parsing entity <IPIF_Steer>.
+Parsing architecture <IMP> of entity <ipif_steer>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_steer128.vhd" into library proc_common_v3_00_a
+Parsing entity <ipif_steer128>.
+Parsing architecture <IMP> of entity <ipif_steer128>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_mirror128.vhd" into library proc_common_v3_00_a
+Parsing entity <ipif_mirror128>.
+Parsing architecture <IMP> of entity <ipif_mirror128>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" into library proc_common_v3_00_a
+Parsing entity <ld_arith_reg>.
+Parsing architecture <imp> of entity <ld_arith_reg>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg2.vhd" into library proc_common_v3_00_a
+Parsing entity <ld_arith_reg2>.
+Parsing architecture <imp> of entity <ld_arith_reg2>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/mux_onehot.vhd" into library proc_common_v3_00_a
+Parsing entity <mux_onehot>.
+Parsing architecture <imp> of entity <mux_onehot>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_bits.vhd" into library proc_common_v3_00_a
+Parsing entity <or_bits>.
+Parsing architecture <implementation> of entity <or_bits>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy.vhd" into library proc_common_v3_00_a
+Parsing entity <or_muxcy>.
+Parsing architecture <implementation> of entity <or_muxcy>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate>.
+Parsing architecture <imp> of entity <or_gate>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate128.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate128>.
+Parsing architecture <imp> of entity <or_gate128>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_adder_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_adder_bit>.
+Parsing architecture <implementation> of entity <pf_adder_bit>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_adder.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_adder>.
+Parsing architecture <implementation> of entity <pf_adder>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter_bit>.
+Parsing architecture <implementation> of entity <pf_counter_bit>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter>.
+Parsing architecture <implementation> of entity <pf_counter>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter_top.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter_top>.
+Parsing architecture <implementation> of entity <pf_counter_top>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_occ_counter>.
+Parsing architecture <implementation> of entity <pf_occ_counter>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter_top.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_occ_counter_top>.
+Parsing architecture <implementation> of entity <pf_occ_counter_top>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_dpram_select.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_dpram_select>.
+Parsing architecture <implementation> of entity <pf_dpram_select>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect>.
+Parsing architecture <imp> of entity <pselect>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_mask.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect_mask>.
+Parsing architecture <imp> of entity <pselect_mask>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl16_fifo.vhd" into library proc_common_v3_00_a
+Parsing entity <srl16_fifo>.
+Parsing architecture <implementation> of entity <srl16_fifo>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo.vhd" into library proc_common_v3_00_a
+Parsing entity <SRL_FIFO>.
+Parsing architecture <IMP> of entity <srl_fifo>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo2.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo2>.
+Parsing architecture <imp> of entity <srl_fifo2>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo3.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo3>.
+Parsing architecture <imp> of entity <srl_fifo3>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_rbu>.
+Parsing architecture <imp> of entity <srl_fifo_rbu>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/valid_be.vhd" into library proc_common_v3_00_a
+Parsing entity <valid_be>.
+Parsing architecture <implementation> of entity <valid_be>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_with_enable_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_with_enable_f>.
+Parsing architecture <implementation> of entity <or_with_enable_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/muxf_struct_f.vhd" into library proc_common_v3_00_a
+Parsing entity <muxf_struct>.
+Parsing architecture <imp> of entity <muxf_struct>.
+Parsing entity <muxf_struct_f>.
+Parsing architecture <imp> of entity <muxf_struct_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/cntr_incr_decr_addn_f.vhd" into library proc_common_v3_00_a
+Parsing entity <cntr_incr_decr_addn_f>.
+Parsing architecture <imp> of entity <cntr_incr_decr_addn_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/dynshreg_f.vhd" into library proc_common_v3_00_a
+Parsing entity <dynshreg_f>.
+Parsing architecture <behavioral> of entity <dynshreg_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/dynshreg_i_f.vhd" into library proc_common_v3_00_a
+Parsing entity <dynshreg_i_f>.
+Parsing architecture <behavioral> of entity <dynshreg_i_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/mux_onehot_f.vhd" into library proc_common_v3_00_a
+Parsing entity <mux_onehot_f>.
+Parsing architecture <imp> of entity <mux_onehot_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu_f.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_rbu_f>.
+Parsing architecture <imp> of entity <srl_fifo_rbu_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_f.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_f>.
+Parsing architecture <imp> of entity <srl_fifo_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/compare_vectors_f.vhd" into library proc_common_v3_00_a
+Parsing entity <compare_vectors_f>.
+Parsing architecture <imp> of entity <compare_vectors_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect_f>.
+Parsing architecture <imp> of entity <pselect_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd" into library proc_common_v3_00_a
+Parsing entity <counter_f>.
+Parsing architecture <imp> of entity <counter_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_muxcy_f>.
+Parsing architecture <implementation> of entity <or_muxcy_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate_f>.
+Parsing architecture <imp> of entity <or_gate_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/soft_reset.vhd" into library proc_common_v3_00_a
+Parsing entity <soft_reset>.
+Parsing architecture <implementation> of entity <soft_reset>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family.vhd" into library proc_common_v3_00_a
+Parsing package <family>.
+Parsing package body <family>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family_support.vhd" into library proc_common_v3_00_a
+Parsing package <family_support>.
+Parsing package body <family_support>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/coregen_comp_defs.vhd" into library proc_common_v3_00_a
+Parsing package <coregen_comp_defs>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/common_types_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <Common_Types>.
+Parsing package body <Common_Types>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/proc_common_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <proc_common_pkg>.
+Parsing package body <proc_common_pkg>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/conv_funs_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <conv_funs_pkg>.
+Parsing package body <conv_funs_pkg>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <ipif_pkg>.
+Parsing package body <ipif_pkg>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/async_fifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <async_fifo_fg>.
+Parsing architecture <implementation> of entity <async_fifo_fg>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/sync_fifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <sync_fifo_fg>.
+Parsing architecture <implementation> of entity <sync_fifo_fg>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/basic_sfifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <basic_sfifo_fg>.
+Parsing architecture <implementation> of entity <basic_sfifo_fg>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/blk_mem_gen_wrapper.vhd" into library proc_common_v3_00_a
+Parsing entity <blk_mem_gen_wrapper>.
+Parsing architecture <implementation> of entity <blk_mem_gen_wrapper>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/addsub.vhd" into library proc_common_v3_00_a
+Parsing entity <addsub>.
+Parsing architecture <imp> of entity <addsub>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <counter_bit>.
+Parsing architecture <imp> of entity <counter_bit>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter.vhd" into library proc_common_v3_00_a
+Parsing entity <Counter>.
+Parsing architecture <imp> of entity <counter>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr.vhd" into library proc_common_v3_00_a
+Parsing entity <direct_path_cntr>.
+Parsing architecture <imp> of entity <direct_path_cntr>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr_ai.vhd" into library proc_common_v3_00_a
+Parsing entity <direct_path_cntr_ai>.
+Parsing architecture <imp> of entity <direct_path_cntr_ai>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/down_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <down_counter>.
+Parsing architecture <simulation> of entity <down_counter>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/eval_timer.vhd" into library proc_common_v3_00_a
+Parsing entity <eval_timer>.
+Parsing architecture <imp> of entity <eval_timer>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/inferred_lut4.vhd" into library proc_common_v3_00_a
+Parsing entity <inferred_lut4>.
+Parsing architecture <implementation> of entity <inferred_lut4>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_steer.vhd" into library proc_common_v3_00_a
+Parsing entity <IPIF_Steer>.
+Parsing architecture <IMP> of entity <ipif_steer>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_steer128.vhd" into library proc_common_v3_00_a
+Parsing entity <ipif_steer128>.
+Parsing architecture <IMP> of entity <ipif_steer128>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_mirror128.vhd" into library proc_common_v3_00_a
+Parsing entity <ipif_mirror128>.
+Parsing architecture <IMP> of entity <ipif_mirror128>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" into library proc_common_v3_00_a
+Parsing entity <ld_arith_reg>.
+Parsing architecture <imp> of entity <ld_arith_reg>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg2.vhd" into library proc_common_v3_00_a
+Parsing entity <ld_arith_reg2>.
+Parsing architecture <imp> of entity <ld_arith_reg2>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/mux_onehot.vhd" into library proc_common_v3_00_a
+Parsing entity <mux_onehot>.
+Parsing architecture <imp> of entity <mux_onehot>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_bits.vhd" into library proc_common_v3_00_a
+Parsing entity <or_bits>.
+Parsing architecture <implementation> of entity <or_bits>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy.vhd" into library proc_common_v3_00_a
+Parsing entity <or_muxcy>.
+Parsing architecture <implementation> of entity <or_muxcy>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate>.
+Parsing architecture <imp> of entity <or_gate>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate128.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate128>.
+Parsing architecture <imp> of entity <or_gate128>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_adder_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_adder_bit>.
+Parsing architecture <implementation> of entity <pf_adder_bit>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_adder.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_adder>.
+Parsing architecture <implementation> of entity <pf_adder>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter_bit>.
+Parsing architecture <implementation> of entity <pf_counter_bit>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter>.
+Parsing architecture <implementation> of entity <pf_counter>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter_top.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter_top>.
+Parsing architecture <implementation> of entity <pf_counter_top>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_occ_counter>.
+Parsing architecture <implementation> of entity <pf_occ_counter>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter_top.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_occ_counter_top>.
+Parsing architecture <implementation> of entity <pf_occ_counter_top>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_dpram_select.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_dpram_select>.
+Parsing architecture <implementation> of entity <pf_dpram_select>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect>.
+Parsing architecture <imp> of entity <pselect>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_mask.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect_mask>.
+Parsing architecture <imp> of entity <pselect_mask>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl16_fifo.vhd" into library proc_common_v3_00_a
+Parsing entity <srl16_fifo>.
+Parsing architecture <implementation> of entity <srl16_fifo>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo.vhd" into library proc_common_v3_00_a
+Parsing entity <SRL_FIFO>.
+Parsing architecture <IMP> of entity <srl_fifo>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo2.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo2>.
+Parsing architecture <imp> of entity <srl_fifo2>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo3.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo3>.
+Parsing architecture <imp> of entity <srl_fifo3>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_rbu>.
+Parsing architecture <imp> of entity <srl_fifo_rbu>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/valid_be.vhd" into library proc_common_v3_00_a
+Parsing entity <valid_be>.
+Parsing architecture <implementation> of entity <valid_be>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_with_enable_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_with_enable_f>.
+Parsing architecture <implementation> of entity <or_with_enable_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/muxf_struct_f.vhd" into library proc_common_v3_00_a
+Parsing entity <muxf_struct>.
+Parsing architecture <imp> of entity <muxf_struct>.
+Parsing entity <muxf_struct_f>.
+Parsing architecture <imp> of entity <muxf_struct_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/cntr_incr_decr_addn_f.vhd" into library proc_common_v3_00_a
+Parsing entity <cntr_incr_decr_addn_f>.
+Parsing architecture <imp> of entity <cntr_incr_decr_addn_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/dynshreg_f.vhd" into library proc_common_v3_00_a
+Parsing entity <dynshreg_f>.
+Parsing architecture <behavioral> of entity <dynshreg_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/dynshreg_i_f.vhd" into library proc_common_v3_00_a
+Parsing entity <dynshreg_i_f>.
+Parsing architecture <behavioral> of entity <dynshreg_i_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/mux_onehot_f.vhd" into library proc_common_v3_00_a
+Parsing entity <mux_onehot_f>.
+Parsing architecture <imp> of entity <mux_onehot_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu_f.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_rbu_f>.
+Parsing architecture <imp> of entity <srl_fifo_rbu_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_f.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_f>.
+Parsing architecture <imp> of entity <srl_fifo_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/compare_vectors_f.vhd" into library proc_common_v3_00_a
+Parsing entity <compare_vectors_f>.
+Parsing architecture <imp> of entity <compare_vectors_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect_f>.
+Parsing architecture <imp> of entity <pselect_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd" into library proc_common_v3_00_a
+Parsing entity <counter_f>.
+Parsing architecture <imp> of entity <counter_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_muxcy_f>.
+Parsing architecture <implementation> of entity <or_muxcy_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate_f>.
+Parsing architecture <imp> of entity <or_gate_f>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/soft_reset.vhd" into library proc_common_v3_00_a
+Parsing entity <soft_reset>.
+Parsing architecture <implementation> of entity <soft_reset>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_address_decoder.vhd" into library plbv46_slave_single_v1_01_a
+Parsing entity <plb_address_decoder>.
+Parsing architecture <IMP> of entity <plb_address_decoder>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_slave_attachment.vhd" into library plbv46_slave_single_v1_01_a
+Parsing entity <plb_slave_attachment>.
+Parsing architecture <implementation> of entity <plb_slave_attachment>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plbv46_slave_single.vhd" into library plbv46_slave_single_v1_01_a
+Parsing entity <plbv46_slave_single>.
+Parsing architecture <implementation> of entity <plbv46_slave_single>.
+Parsing VHDL file "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/vhdl/n3eif.vhd" into library n3eif_v1_00_a
+Parsing entity <n3eif>.
+Parsing architecture <IMP> of entity <n3eif>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <system_n3eif_0_wrapper>.
+Going to vhdl side to elaborate module n3eif
+
+Elaborating entity <n3eif> (architecture <IMP>) with generics from library <n3eif_v1_00_a>.
+
+Elaborating entity <plbv46_slave_single> (architecture <implementation>) with generics from library <plbv46_slave_single_v1_01_a>.
+
+Elaborating entity <plb_slave_attachment> (architecture <implementation>) with generics from library <plbv46_slave_single_v1_01_a>.
+
+Elaborating entity <plb_address_decoder> (architecture <IMP>) with generics from library <plbv46_slave_single_v1_01_a>.
+WARNING:HDLCompiler:1127 - "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_address_decoder.vhd" Line 319: Assignment to cs_s_h_clr ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_address_decoder.vhd" Line 323: Assignment to addr_match_clr ignored, since the identifier is never used
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <or_gate128> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <or_muxcy> (architecture <implementation>) with generics from library <proc_common_v3_00_a>.
+INFO:HDLCompiler:679 - "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_slave_attachment.vhd" Line 711. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:1127 - "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_slave_attachment.vhd" Line 1025: Assignment to start_data_phase ignored, since the identifier is never used
+
+Elaborating entity <counter_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+Going to verilog side to elaborate module user_logic
+
+Elaborating module <user_logic(C_SLV_DWIDTH=32,C_NUM_REG=10)>.
+
+Elaborating module <n3_if_core>.
+
+Elaborating module <kcpsm6(interrupt_vector=12'b01111111111,scratch_pad_memory_size=64,hwbuild=8'b0)>.
+
+Elaborating module <LUT6_2(INIT=64'b1111111111111111111101010101010100000000000000000000111011101110)>.
+
+Elaborating module <FD>.
+
+Elaborating module <LUT6_2(INIT=64'b010000011000000000000101100000000110001000000000001001100)>.
+
+Elaborating module <LUT6_2(INIT=64'b010000000000000000000000000000000000000000100000000000)>.
+
+Elaborating module <LUT6(INIT=64'b01100101010101010)>.
+
+Elaborating module <LUT6_2(INIT=64'b1100110000110011111111110000000010000000100000001000000010000000)>.
+
+Elaborating module <LUT6(INIT=64'b0101101000111100111111111111111100000000000000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b0111011101110111000000100111011100000000000000000000001000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b0111100000000000000000000000000000010001111111111)>.
+
+Elaborating module <LUT6(INIT=64'b1111111111111111111111111111111100000000000001000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b1111111111111111000100000000000000000000000000000010000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b01111001010000000000000000000000100001000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b0111011100001000000000000000000000000000000000000000111100000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b1101000000000000000000000000000000000010000000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b01001111110011111100000000000100001111011111001110)>.
+
+Elaborating module <LUT6_2(INIT=64'b1100000011001100000000000000000010100000101010100000000000000000)>.
+
+Elaborating module <FDR>.
+
+Elaborating module <LUT6_2(INIT=64'b1000000000000000000000000000000000100000000000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b0100000000000000000000000000000000000001000000000000000000000000)>.
+
+Elaborating module <LUT6(INIT=64'b010000000000000100000000000000000000000000000000000000000)>.
+
+Elaborating module <LUT6(INIT=64'b1010110010101100111111110000000011111111000000001111111100000000)>.
+
+Elaborating module <XORCY>.
+
+Elaborating module <LUT6_2(INIT=64'b010000111011110000000000000000000)>.
+
+Elaborating module <MUXCY>.
+
+Elaborating module <LUT6(INIT=64'b0110100110010110100101100110100110010110011010010110100110010110)>.
+
+Elaborating module <LUT6(INIT=64'b1111111111111111101010101100110011110000111100001111000011110000)>.
+
+Elaborating module <LUT6_2(INIT=64'b011001100110011101010101100110011110000101010100000000000000000)>.
+
+Elaborating module <FDRE>.
+
+Elaborating module <LUT6_2(INIT=64'b1010001010000000000000000000000000000000111100000000000011110000)>.
+
+Elaborating module <LUT6_2(INIT=64'b01)>.
+
+Elaborating module <LUT6_2(INIT=64'b0110100000000000000000000000000000000)>.
+
+Elaborating module <LUT6(INIT=64'b1111101111111111000000000000000000000000000000000000000000000000)>.
+
+Elaborating module <LUT6_2(INIT=64'b1111111100000000111100001111000011001100110011001010101010101010)>.
+
+Elaborating module <LUT6(INIT=64'b010101010000000001111111100110011110011000000111100000000)>.
+
+Elaborating module <LUT6(INIT=64'b010101010000000001111111111001100110011001111000000000000)>.
+
+Elaborating module <LUT6(INIT=64'b010101010000000000000000011001100110011001111000000000000)>.
+
+Elaborating module <RAM32M(INIT_A=64'b0,INIT_B=64'b0,INIT_C=64'b0,INIT_D=64'b0)>.
+
+Elaborating module <LUT6_2(INIT=64'b010101001010011010101010101010101010101010101010101010)>.
+
+Elaborating module <LUT6_2(INIT=64'b0101010001001010010101010101010101010101010101010101010)>.
+
+Elaborating module <LUT6_2(INIT=64'b0110100101101001011011101000101011001100110011000000000000000000)>.
+
+Elaborating module <LUT6(INIT=64'b1011111110111100100011111000110010110011101100001000001110000000)>.
+
+Elaborating module <LUT6(INIT=64'b1111111100000000111100001111000011001100110011001010101010101010)>.
+
+Elaborating module <RAM64M(INIT_A=64'b0,INIT_B=64'b0,INIT_C=64'b0,INIT_D=64'b0)>.
+WARNING:HDLCompiler:189 - "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/verilog/n3_if_core.v" Line 188: Size mismatch in connection of port <address>. Formal port size is 12-bit while actual signal size is 10-bit.
+
+Elaborating module <n3ifpgm(C_FAMILY="S6",C_RAM_SIZE_KWORDS=1,C_JTAG_LOADER_ENABLE=1)>.
+
+Elaborating module
+<RAMB16BWER(DATA_WIDTH_A=18,DOA_REG=0,EN_RSTRAM_A="FALSE",INIT_A=9'b0,RST_PRIORITY_A="CE",SRVAL_A=9'b0,WRITE_MODE_A="WRITE_FIRST",DATA_WIDTH_B=18,DOB_REG=0,EN_RSTRAM_B="FALSE",INIT_B=9'b0,RST_PRIORITY_B="CE",SRVAL_B=9'b0,WRITE_MODE_B="WRITE_FIRST",RSTTYPE="SYNC",INIT_FILE="NONE",SIM_COLLISION_CHECK="ALL",SIM_DEVICE="SPARTAN6",INIT_00=256'b01000000000000000111010000001011011111000001101101111000000101000111100000000000011111000000001101000000000001010100000100000000010000100000001101000000000011000100000000000000000001001101101101000000000011000100001000000011010000000000010001000001000000,INIT_01=256'b01000000000000000000000111011011010000000000010001000000000000000110100000000000011011000000000001110000000000110100000000101000010000111111001101000000001001110100000000100000010000000000111101000000000111000100000000000011010000000000010101000001000000,INIT_02=256'b010000000110010110101101000000000000001011000001001011000000001000011000110000000000000110100101101110010000000001000000010101111010110100000000000
+000101100000100101100000001100000000101010011101000000000111100100000000011110000000000000011101000000000001,INIT_03=256'b01000101111000000100000000000111100001000000000001000101100101000100000000000111100001000000000001000101001110000100000010000000100000001000100000101101100000000000001100000011011011010000000010000000110110110101100100000000000000101101011101101110000000,INIT_04=256'b1110000100000000000100010000000000010000000000011110000100000000000100010011001100010000000000011110000100000000000100010010000000010000000000011110000100000000000100010111001100010000000000011110000100000000000100010111100100010000000000011110000100000000,INIT_05=256'b01000000000001111000010000000000010001010101000001000000000001111000010000000000010001011001100001000000000001111000010000000000010001011011000001000000000001111000010000000000010001011001010001000000000001111000010000000000010001010100110001000000000001,INIT_06=256'b101001010110000000000000111101010000010100010000000001100000000001010000000000001110000100000000
+0001000100000000000100000000000111100001000000000001000101110100000100000000000111100001000000000001000101110011000100000000000111100001000000000001000101100101,INIT_07=256'b01000000101000000100010010000000000000011011000001000000100000000100010001000100000001000100100001010100000100000000010000000100000000001110000110000000000000010100000000000000100000011011110001011000000001000000001111111100100000011101011101010100000000,INIT_08=256'b0100011100000010000000010110111011010111000001111110000010010010110101100001000000010110000000000001011100000001000000010001100100000001011100110000000100011001000000010111001100000001000110010000000101110011000000010001100100000001011100110000000001101100,INIT_09=256'b011111111000101010100001000000000111111110001010100100000000000001111111100010101010001010000000011111111000101010101100100000000111111110001010101000010000000010000101000010101000000010000000100010010000101010000011100100000100010110001011000000001,INIT_0A=256'b0100000001100001010001100010000111000001011001111
+01001000001010000100100000000000010001000000000001000011111111010100000000000000000001000000010000000100010010000101010000010000000001011110000000000011111111000101010100010100000000111111110001010101011001,INIT_0B=256'b0101000000000000110100100000000100010010000000001000000000000001110111110000011011011110000001010001111000000000000111110000000010000000000000001101001000000001000100101000000001010000000000001101000000000000001000001010110000010010000000010001000100000001,INIT_0C=256'b01001000000000100000000000000100001101001100001000000000000000110100100000000100010010100000000100001100100000010000110000111001000011000011100100001100001110010000110000111000110011000100000000001100010000010000100000011000110010000011110000001000010000,INIT_0D=256'b010000100000001110100010000010000100000111100101101000100000011001000001111111111010001000000100010000011110101110100010000000100100000111100101101000100000000100101010000010000110001000111111101001100000011000100111000000001010000000000001101001000000001,INIT_0E=25
+6'b010000100011100110100010000110000100001000110011101000100001011001000010001011011010001000010100010000100010010110100010000100100100001000011101101000100001000001000010000101011010001000001110010000100000110110100010000011000100001000000111101000100000101,INIT_0F=256'b0100101111001000001111001000000001001010000101010111000000001101010000111100100000111100100000000100101000010101011000000000110101000011110010000011111011110101010001000001010000000000001101001100000011000100110000000000100001000111111101000100001101,INIT_10=256'b0101010100000100001101010000001100100000111100100000000100101000010101011000000000110101011111110010000011110010000000010010100001010101010000000011010100111111001000001111001000000001001010000001010100000010001000001111001000000001010001100010000011110010,INIT_11=256'b01010100000001001000001111001000000001010010110001010100000000001000001111001000000001010010110001010100000011001000001111001000000001010010110001010100000010001000001111001000000001001010000101010100001000001101010000
+011100100000111100100000000100101000,INIT_12=256'b01010000000100010100000000000000000001010110100000000100100010000000010101000111010101000000101101010000000100000101000000000001010000000000001101010000000100011101000000000100000001010100011101010000000100011101000000000100100000111100100000000101001011,INIT_13=256'b0100101000000101010000011000000001010110100000000100101000000101010000110000000001010110100000000100101000000101010011100000000001011010010000000101101001010100000000000000000001010110100000000100100010000000010101000111010101000000101101010000000100,INIT_14=256'b0100101000010101010001000001000101000001100100010100000110001101010000001101010000000000000000000101011111000000010101111100000001001010000001010100000001010100000000000000000001010111110000000101011111000000010010100000010101000000010000000101011010,INIT_15=256'b0100100001100101010000000000000110000101011011100100010000000100000001010101100001000100101000010100000000000001100001010101111001000000000001000100000001100001010000000000000110
+0001010100111001000000000001010000000000111000010000000110000101000000000000,INIT_16=256'b0101101001000101000000110101010000000000000110000101101010100100110000000100000001010111110001001100010100010100000000000001100001011001011001001100000001000000010101111100010011000010100101000000000000011000010110000010010010000000010000000101011010,INIT_17=256'b0101000000000000011000010111100110010100000000010000000101101001000101000011001001010000000000000110000101110100100101000000000100000001011010010001010000011001010100000000000001100001011011111001010000000001,INIT_18=256'b0,INIT_19=256'b0,INIT_1A=256'b0,INIT_1B=256'b0,INIT_1C=256'b0,INIT_1D=256'b0,INIT_1E=256'b0,INIT_1F=256'b0,INIT_20=256'b0,INIT_21=256'b0,INIT_22=256'b0,INIT_23=256'b0,INIT_24=256'b0,INIT_25=256'b0,INIT_26=256'b0,INIT_27=256'b0,INIT_28=256'b0,INIT_29=256'b0,INIT_2A=256'b0,INIT_2B=256'b0,INIT_2C=256'b0,INIT_2D=256'b0,INIT_2E=256'b0,INIT_2F=256'b0,INIT_30=256'b0110100000000111100010000100000000000110100000000100010000000010010010000000001101001100
+0010110001001100000001001000110001001111010000000000010011000000000011100100000000101111110100000101001111001100010011111100100001001011110001000100011111000000010000,INIT_31=256'b0111000100000101000110010001001000011000011101001001100000010010000100000111000110010000111100000001011010000001100010000000100000001110100001101001100001011000100110000001000100011001101001101000000000010000110100000000010100011000100111101101000001010,INIT_32=256'b1101000100000001000100011000000000011111000000000001111000000000101000110010111011001111010000001010001100101110110011100011000011100011001011100100000100001110101111110000000010001110001000000000010011110000000000111110000000100011001011100011111100000000,INIT_33=256'b01001000000000001101100000001000010110001000100011011001000010010101100110001001110110100000101001101000100000001000100010000000011011111000001101101111000000101,INIT_34=256'b0,INIT_35=256'b0,INIT_36=256'b0,INIT_37=256'b0,INIT_38=256'b0,INIT_39=256'b0,INIT_3A=256'b0,INIT_3B=256'b0,INIT_3C=256'b0,INIT_3D=25
+6'b0,INIT_3E=256'b0,INIT_3F=256'b010001100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,INITP_00=256'b0100000100010100010100110110100100000101000011000011000011000011000011000011000011000011000011000011000011000011000011000011000011000011000001000110011001100110000000011001100000010100010100011010000000010001010001000100000001010000010000010001010001000,INITP_01=256'b1010100000101000001100101000110111011101110111011101110111011101110111011101110111010000100010100010001010000001010101000001000010100010101000001010001010100101000011010000001010100010100010001000100010001000100010001000100101101011010000101010101010101010,INITP_02=256'b01011011000101101100010110110001011011000101101100010110110001011011000101101001011010100101000010100101010100010101010001010001010001010001010101010101010001010101010100010100010100
+010100010100010100010100010100000101000001010000010100000101000101010,INITP_03=256'b0,INITP_04=256'b0,INITP_05=256'b0,INITP_06=256'b010000000000010001010100000001101110111010101000010010111010001000000001000110000110101100100001000110000001010101010,INITP_07=256'b1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000>.
+
+Elaborating module <jtag_loader_6(C_FAMILY="S6",C_NUM_PICOBLAZE=1,C_JTAG_LOADER_ENABLE=1,C_BRAM_MAX_ADDR_WIDTH=32'sb01010,C_ADDR_WIDTH_0=32'sb01010)>.
+
+Elaborating module <BSCAN_SPARTAN6(JTAG_CHAIN=2)>.
+
+Elaborating module <BUFG>.
+WARNING:HDLCompiler:189 - "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/verilog/n3_if_core.v" Line 212: Size mismatch in connection of port <address>. Formal port size is 12-bit while actual signal size is 10-bit.
+
+Elaborating module <pblaze_simple_pic>.
+
+Elaborating module <rotary_filter>.
+
+Elaborating module <pblaze_if>.
+WARNING:HDLCompiler:413 - "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/verilog/n3_if_core.v" Line 296: Result of 21-bit expression is truncated to fit in 20-bit target.
+Back to vhdl to continue elaboration
+Back to verilog to continue elaboration
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <system_n3eif_0_wrapper>.
+    Related source file is "X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\hdl\system_n3eif_0_wrapper.v".
+    Summary:
+	no macro.
+Unit <system_n3eif_0_wrapper> synthesized.
+
+Synthesizing Unit <n3eif>.
+    Related source file is "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/vhdl/n3eif.vhd".
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+        C_BASEADDR = "11001011000000000000000000000000"
+        C_HIGHADDR = "11001011000000001111111111111111"
+        C_SPLB_AWIDTH = 32
+        C_SPLB_DWIDTH = 32
+        C_SPLB_NUM_MASTERS = 2
+        C_SPLB_MID_WIDTH = 1
+        C_SPLB_NATIVE_DWIDTH = 32
+        C_SPLB_P2P = 0
+        C_SPLB_SUPPORT_BURSTS = 0
+        C_SPLB_SMALLEST_MASTER = 32
+        C_SPLB_CLK_PERIOD_PS = 15000
+        C_INCLUDE_DPHASE_TIMER = 1
+        C_FAMILY = "spartan6"
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+INFO:Xst:3210 - "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/vhdl/n3eif.vhd" line 396: Output port <Bus2IP_Addr> of the instance <PLBV46_SLAVE_SINGLE_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/vhdl/n3eif.vhd" line 396: Output port <Bus2IP_CS> of the instance <PLBV46_SLAVE_SINGLE_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/vhdl/n3eif.vhd" line 396: Output port <Bus2IP_RNW> of the instance <PLBV46_SLAVE_SINGLE_I> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <n3eif> synthesized.
+
+Synthesizing Unit <plbv46_slave_single>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plbv46_slave_single.vhd".
+        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000011001011000000000000000000000000","0000000000000000000000000000000011001011000000001111111111111111")
+        C_ARD_NUM_CE_ARRAY = (16)
+        C_SPLB_P2P = 0
+        C_BUS2CORE_CLK_RATIO = 1
+        C_INCLUDE_DPHASE_TIMER = 1
+        C_SPLB_MID_WIDTH = 1
+        C_SPLB_NUM_MASTERS = 2
+        C_SPLB_AWIDTH = 32
+        C_SPLB_DWIDTH = 32
+        C_SIPIF_DWIDTH = 32
+        C_FAMILY = "spartan6"
+WARNING:Xst:647 - Input <PLB_MSize> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrPendPri> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdPendPri> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_reqPri> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_TAttribute> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_SAValid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdPrim> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrPrim> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_abort> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_busLock> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_lockErr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrBurst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdBurst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrPendReq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdPendReq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <plbv46_slave_single> synthesized.
+
+Synthesizing Unit <plb_slave_attachment>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_slave_attachment.vhd".
+        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000011001011000000000000000000000000","0000000000000000000000000000000011001011000000001111111111111111")
+        C_ARD_NUM_CE_ARRAY = (16)
+        C_PLB_NUM_MASTERS = 2
+        C_PLB_MID_WIDTH = 1
+        C_SPLB_P2P = 0
+        C_BUS2CORE_CLK_RATIO = 1
+        C_IPIF_ABUS_WIDTH = 32
+        C_IPIF_DBUS_WIDTH = 32
+        C_DPHASE_TIMEOUT = 128
+        C_INCLUDE_DPHASE_TIMER = 1
+        C_FAMILY = "spartan6"
+WARNING:Xst:647 - Input <PLB_UABus> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_slave_attachment.vhd" line 1201: Output port <Count_Out> of the instance <INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER> is unconnected or connected to loadless signal.
+    Register <sl_rdcomp_i> equivalent to <rd_clear_sl_busy> has been removed
+    Register <sl_rddack_i> equivalent to <rd_clear_sl_busy> has been removed
+    Register <wr_clear_sl_busy> equivalent to <sl_wrdack_i> has been removed
+    Register <sl_wrcomp_i> equivalent to <sl_wrdack_i> has been removed
+    Register <set_sl_busy> equivalent to <sl_addrack_i> has been removed
+    Found 32-bit register for signal <plb_wrdbus_reg>.
+    Found 1-bit register for signal <plb_masterid_reg>.
+    Found 1-bit register for signal <plb_rnw_reg>.
+    Found 4-bit register for signal <plb_size_reg>.
+    Found 3-bit register for signal <plb_type_reg>.
+    Found 1-bit register for signal <plb_pavalid_reg>.
+    Found 32-bit register for signal <plb_abus_reg>.
+    Found 1-bit register for signal <GEN_FOR_SHARED.addr_cntl_cs>.
+    Found 1-bit register for signal <sl_addrack_i>.
+    Found 1-bit register for signal <sl_rearbitrate_i>.
+    Found 1-bit register for signal <addr_cycle_flush>.
+    Found 32-bit register for signal <master_id>.
+    Found 1-bit register for signal <sl_busy>.
+    Found 2-bit register for signal <sl_mbusy_i>.
+    Found 2-bit register for signal <sl_mrderr_i>.
+    Found 2-bit register for signal <sl_mwrerr_i>.
+    Found 1-bit register for signal <sl_wrdack_i>.
+    Found 1-bit register for signal <rd_clear_sl_busy>.
+    Found 32-bit register for signal <sl_rddbus_i>.
+    Found 1-bit register for signal <bus2ip_rnw_i>.
+    Found 4-bit register for signal <bus2ip_be_i>.
+    Found 32-bit register for signal <bus2ip_addr_i>.
+    Found 1-bit register for signal <data_timeout>.
+    Found 4-bit register for signal <plb_be_reg>.
+    Summary:
+	inferred 193 D-type flip-flop(s).
+	inferred  12 Multiplexer(s).
+Unit <plb_slave_attachment> synthesized.
+
+Synthesizing Unit <plb_address_decoder>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_address_decoder.vhd".
+        C_BUS_AWIDTH = 32
+        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000011001011000000000000000000000000","0000000000000000000000000000000011001011000000001111111111111111")
+        C_ARD_NUM_CE_ARRAY = (16)
+        C_SPLB_P2P = 0
+        C_FAMILY = "nofamily"
+WARNING:Xst:647 - Input <Address_In_Erly> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Address_Valid_Erly> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Bus_RNW_Erly> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 6-bit register for signal <addr_out_s_h>.
+    Found 1-bit register for signal <MEM_DECODE_GEN[0].GEN_PLB_SHARED.cs_out_s_h>.
+    Found 1-bit register for signal <cs_out_i>.
+    Found 1-bit register for signal <decode_hit_reg>.
+    Found 1-bit register for signal <rdce_out_i<0>>.
+    Found 1-bit register for signal <wrce_out_i<0>>.
+    Found 1-bit register for signal <rdce_out_i<1>>.
+    Found 1-bit register for signal <wrce_out_i<1>>.
+    Found 1-bit register for signal <rdce_out_i<2>>.
+    Found 1-bit register for signal <wrce_out_i<2>>.
+    Found 1-bit register for signal <rdce_out_i<3>>.
+    Found 1-bit register for signal <wrce_out_i<3>>.
+    Found 1-bit register for signal <rdce_out_i<4>>.
+    Found 1-bit register for signal <wrce_out_i<4>>.
+    Found 1-bit register for signal <rdce_out_i<5>>.
+    Found 1-bit register for signal <wrce_out_i<5>>.
+    Found 1-bit register for signal <rdce_out_i<6>>.
+    Found 1-bit register for signal <wrce_out_i<6>>.
+    Found 1-bit register for signal <rdce_out_i<7>>.
+    Found 1-bit register for signal <wrce_out_i<7>>.
+    Found 1-bit register for signal <rdce_out_i<8>>.
+    Found 1-bit register for signal <wrce_out_i<8>>.
+    Found 1-bit register for signal <rdce_out_i<9>>.
+    Found 1-bit register for signal <wrce_out_i<9>>.
+    Found 1-bit register for signal <rdce_out_i<10>>.
+    Found 1-bit register for signal <wrce_out_i<10>>.
+    Found 1-bit register for signal <rdce_out_i<11>>.
+    Found 1-bit register for signal <wrce_out_i<11>>.
+    Found 1-bit register for signal <rdce_out_i<12>>.
+    Found 1-bit register for signal <wrce_out_i<12>>.
+    Found 1-bit register for signal <rdce_out_i<13>>.
+    Found 1-bit register for signal <wrce_out_i<13>>.
+    Found 1-bit register for signal <rdce_out_i<14>>.
+    Found 1-bit register for signal <wrce_out_i<14>>.
+    Found 1-bit register for signal <rdce_out_i<15>>.
+    Found 1-bit register for signal <wrce_out_i<15>>.
+    Found 1-bit register for signal <rnw_s_h>.
+    Summary:
+	inferred  42 D-type flip-flop(s).
+Unit <plb_address_decoder> synthesized.
+
+Synthesizing Unit <pselect_f_1>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 16
+        C_AW = 32
+        C_BAR = "11001011000000000000000000000000"
+        C_FAMILY = "nofamily"
+WARNING:Xst:647 - Input <A<16:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_1> synthesized.
+
+Synthesizing Unit <pselect_f_2>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "0000"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_2> synthesized.
+
+Synthesizing Unit <pselect_f_3>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "0001"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_3> synthesized.
+
+Synthesizing Unit <pselect_f_4>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "0010"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_4> synthesized.
+
+Synthesizing Unit <pselect_f_5>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "0011"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_5> synthesized.
+
+Synthesizing Unit <pselect_f_6>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "0100"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_6> synthesized.
+
+Synthesizing Unit <pselect_f_7>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "0101"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_7> synthesized.
+
+Synthesizing Unit <pselect_f_8>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "0110"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_8> synthesized.
+
+Synthesizing Unit <pselect_f_9>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "0111"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_9> synthesized.
+
+Synthesizing Unit <pselect_f_10>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "1000"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_10> synthesized.
+
+Synthesizing Unit <pselect_f_11>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "1001"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_11> synthesized.
+
+Synthesizing Unit <pselect_f_12>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "1010"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_12> synthesized.
+
+Synthesizing Unit <pselect_f_13>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "1011"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_13> synthesized.
+
+Synthesizing Unit <pselect_f_14>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "1100"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_14> synthesized.
+
+Synthesizing Unit <pselect_f_15>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "1101"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_15> synthesized.
+
+Synthesizing Unit <pselect_f_16>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "1110"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_16> synthesized.
+
+Synthesizing Unit <pselect_f_17>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 4
+        C_AW = 4
+        C_BAR = "1111"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_17> synthesized.
+
+Synthesizing Unit <or_gate128>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate128.vhd".
+        C_OR_WIDTH = 1
+        C_BUS_WIDTH = 1
+        C_USE_LUT_OR = false
+    Summary:
+	no macro.
+Unit <or_gate128> synthesized.
+
+Synthesizing Unit <or_muxcy>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy.vhd".
+        C_NUM_BITS = 1
+    Summary:
+	no macro.
+Unit <or_muxcy> synthesized.
+
+Synthesizing Unit <counter_f>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd".
+        C_NUM_BITS = 8
+        C_FAMILY = "nofamily"
+    Found 9-bit register for signal <INFERRED_GEN.icount_out>.
+    Found 9-bit subtractor for signal <INFERRED_GEN.icount_out[8]_GND_35_o_mux_5_OUT> created at line 292.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   9 D-type flip-flop(s).
+Unit <counter_f> synthesized.
+
+Synthesizing Unit <user_logic>.
+    Related source file is "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/verilog/user_logic.v".
+        C_SLV_DWIDTH = 32
+        C_NUM_REG = 10
+    Found 1-bit register for signal <slv_reg5<1>>.
+    Found 1-bit register for signal <slv_reg5<2>>.
+    Found 1-bit register for signal <slv_reg5<3>>.
+    Found 1-bit register for signal <slv_reg5<4>>.
+    Found 1-bit register for signal <slv_reg5<5>>.
+    Found 1-bit register for signal <slv_reg5<6>>.
+    Found 1-bit register for signal <slv_reg5<7>>.
+    Found 1-bit register for signal <slv_reg5<8>>.
+    Found 1-bit register for signal <slv_reg5<9>>.
+    Found 1-bit register for signal <slv_reg5<10>>.
+    Found 1-bit register for signal <slv_reg5<11>>.
+    Found 1-bit register for signal <slv_reg5<12>>.
+    Found 1-bit register for signal <slv_reg5<13>>.
+    Found 1-bit register for signal <slv_reg5<14>>.
+    Found 1-bit register for signal <slv_reg5<15>>.
+    Found 1-bit register for signal <slv_reg5<16>>.
+    Found 1-bit register for signal <slv_reg5<17>>.
+    Found 1-bit register for signal <slv_reg5<18>>.
+    Found 1-bit register for signal <slv_reg5<19>>.
+    Found 1-bit register for signal <slv_reg5<20>>.
+    Found 1-bit register for signal <slv_reg5<21>>.
+    Found 1-bit register for signal <slv_reg5<22>>.
+    Found 1-bit register for signal <slv_reg5<23>>.
+    Found 1-bit register for signal <slv_reg5<24>>.
+    Found 1-bit register for signal <slv_reg5<25>>.
+    Found 1-bit register for signal <slv_reg5<26>>.
+    Found 1-bit register for signal <slv_reg5<27>>.
+    Found 1-bit register for signal <slv_reg5<28>>.
+    Found 1-bit register for signal <slv_reg5<29>>.
+    Found 1-bit register for signal <slv_reg5<30>>.
+    Found 1-bit register for signal <slv_reg5<31>>.
+    Found 1-bit register for signal <slv_reg6<0>>.
+    Found 1-bit register for signal <slv_reg6<1>>.
+    Found 1-bit register for signal <slv_reg6<2>>.
+    Found 1-bit register for signal <slv_reg6<3>>.
+    Found 1-bit register for signal <slv_reg6<4>>.
+    Found 1-bit register for signal <slv_reg6<5>>.
+    Found 1-bit register for signal <slv_reg6<6>>.
+    Found 1-bit register for signal <slv_reg6<7>>.
+    Found 1-bit register for signal <slv_reg6<8>>.
+    Found 1-bit register for signal <slv_reg6<9>>.
+    Found 1-bit register for signal <slv_reg6<10>>.
+    Found 1-bit register for signal <slv_reg6<11>>.
+    Found 1-bit register for signal <slv_reg6<12>>.
+    Found 1-bit register for signal <slv_reg6<13>>.
+    Found 1-bit register for signal <slv_reg6<14>>.
+    Found 1-bit register for signal <slv_reg6<15>>.
+    Found 1-bit register for signal <slv_reg6<16>>.
+    Found 1-bit register for signal <slv_reg6<17>>.
+    Found 1-bit register for signal <slv_reg6<18>>.
+    Found 1-bit register for signal <slv_reg6<19>>.
+    Found 1-bit register for signal <slv_reg6<20>>.
+    Found 1-bit register for signal <slv_reg6<21>>.
+    Found 1-bit register for signal <slv_reg6<22>>.
+    Found 1-bit register for signal <slv_reg6<23>>.
+    Found 1-bit register for signal <slv_reg6<24>>.
+    Found 1-bit register for signal <slv_reg6<25>>.
+    Found 1-bit register for signal <slv_reg6<26>>.
+    Found 1-bit register for signal <slv_reg6<27>>.
+    Found 1-bit register for signal <slv_reg6<28>>.
+    Found 1-bit register for signal <slv_reg6<29>>.
+    Found 1-bit register for signal <slv_reg6<30>>.
+    Found 1-bit register for signal <slv_reg6<31>>.
+    Found 1-bit register for signal <slv_reg7<0>>.
+    Found 1-bit register for signal <slv_reg7<1>>.
+    Found 1-bit register for signal <slv_reg7<2>>.
+    Found 1-bit register for signal <slv_reg7<3>>.
+    Found 1-bit register for signal <slv_reg7<4>>.
+    Found 1-bit register for signal <slv_reg7<5>>.
+    Found 1-bit register for signal <slv_reg7<6>>.
+    Found 1-bit register for signal <slv_reg7<7>>.
+    Found 1-bit register for signal <slv_reg7<8>>.
+    Found 1-bit register for signal <slv_reg7<9>>.
+    Found 1-bit register for signal <slv_reg7<10>>.
+    Found 1-bit register for signal <slv_reg7<11>>.
+    Found 1-bit register for signal <slv_reg7<12>>.
+    Found 1-bit register for signal <slv_reg7<13>>.
+    Found 1-bit register for signal <slv_reg7<14>>.
+    Found 1-bit register for signal <slv_reg7<15>>.
+    Found 1-bit register for signal <slv_reg7<16>>.
+    Found 1-bit register for signal <slv_reg7<17>>.
+    Found 1-bit register for signal <slv_reg7<18>>.
+    Found 1-bit register for signal <slv_reg7<19>>.
+    Found 1-bit register for signal <slv_reg7<20>>.
+    Found 1-bit register for signal <slv_reg7<21>>.
+    Found 1-bit register for signal <slv_reg7<22>>.
+    Found 1-bit register for signal <slv_reg7<23>>.
+    Found 1-bit register for signal <slv_reg7<24>>.
+    Found 1-bit register for signal <slv_reg7<25>>.
+    Found 1-bit register for signal <slv_reg7<26>>.
+    Found 1-bit register for signal <slv_reg7<27>>.
+    Found 1-bit register for signal <slv_reg7<28>>.
+    Found 1-bit register for signal <slv_reg7<29>>.
+    Found 1-bit register for signal <slv_reg7<30>>.
+    Found 1-bit register for signal <slv_reg7<31>>.
+    Found 1-bit register for signal <slv_reg8<0>>.
+    Found 1-bit register for signal <slv_reg8<1>>.
+    Found 1-bit register for signal <slv_reg8<2>>.
+    Found 1-bit register for signal <slv_reg8<3>>.
+    Found 1-bit register for signal <slv_reg8<4>>.
+    Found 1-bit register for signal <slv_reg8<5>>.
+    Found 1-bit register for signal <slv_reg8<6>>.
+    Found 1-bit register for signal <slv_reg8<7>>.
+    Found 1-bit register for signal <slv_reg8<8>>.
+    Found 1-bit register for signal <slv_reg8<9>>.
+    Found 1-bit register for signal <slv_reg8<10>>.
+    Found 1-bit register for signal <slv_reg8<11>>.
+    Found 1-bit register for signal <slv_reg8<12>>.
+    Found 1-bit register for signal <slv_reg8<13>>.
+    Found 1-bit register for signal <slv_reg8<14>>.
+    Found 1-bit register for signal <slv_reg8<15>>.
+    Found 1-bit register for signal <slv_reg8<16>>.
+    Found 1-bit register for signal <slv_reg8<17>>.
+    Found 1-bit register for signal <slv_reg8<18>>.
+    Found 1-bit register for signal <slv_reg8<19>>.
+    Found 1-bit register for signal <slv_reg8<20>>.
+    Found 1-bit register for signal <slv_reg8<21>>.
+    Found 1-bit register for signal <slv_reg8<22>>.
+    Found 1-bit register for signal <slv_reg8<23>>.
+    Found 1-bit register for signal <slv_reg8<24>>.
+    Found 1-bit register for signal <slv_reg8<25>>.
+    Found 1-bit register for signal <slv_reg8<26>>.
+    Found 1-bit register for signal <slv_reg8<27>>.
+    Found 1-bit register for signal <slv_reg8<28>>.
+    Found 1-bit register for signal <slv_reg8<29>>.
+    Found 1-bit register for signal <slv_reg8<30>>.
+    Found 1-bit register for signal <slv_reg8<31>>.
+    Found 1-bit register for signal <slv_reg9<0>>.
+    Found 1-bit register for signal <slv_reg9<1>>.
+    Found 1-bit register for signal <slv_reg9<2>>.
+    Found 1-bit register for signal <slv_reg9<3>>.
+    Found 1-bit register for signal <slv_reg9<4>>.
+    Found 1-bit register for signal <slv_reg9<5>>.
+    Found 1-bit register for signal <slv_reg9<6>>.
+    Found 1-bit register for signal <slv_reg9<7>>.
+    Found 1-bit register for signal <slv_reg9<8>>.
+    Found 1-bit register for signal <slv_reg9<9>>.
+    Found 1-bit register for signal <slv_reg9<10>>.
+    Found 1-bit register for signal <slv_reg9<11>>.
+    Found 1-bit register for signal <slv_reg9<12>>.
+    Found 1-bit register for signal <slv_reg9<13>>.
+    Found 1-bit register for signal <slv_reg9<14>>.
+    Found 1-bit register for signal <slv_reg9<15>>.
+    Found 1-bit register for signal <slv_reg9<16>>.
+    Found 1-bit register for signal <slv_reg9<17>>.
+    Found 1-bit register for signal <slv_reg9<18>>.
+    Found 1-bit register for signal <slv_reg9<19>>.
+    Found 1-bit register for signal <slv_reg9<20>>.
+    Found 1-bit register for signal <slv_reg9<21>>.
+    Found 1-bit register for signal <slv_reg9<22>>.
+    Found 1-bit register for signal <slv_reg9<23>>.
+    Found 1-bit register for signal <slv_reg9<24>>.
+    Found 1-bit register for signal <slv_reg9<25>>.
+    Found 1-bit register for signal <slv_reg9<26>>.
+    Found 1-bit register for signal <slv_reg9<27>>.
+    Found 1-bit register for signal <slv_reg9<28>>.
+    Found 1-bit register for signal <slv_reg9<29>>.
+    Found 1-bit register for signal <slv_reg9<30>>.
+    Found 1-bit register for signal <slv_reg9<31>>.
+    Found 1-bit register for signal <slv_reg5<0>>.
+    Summary:
+	inferred 160 D-type flip-flop(s).
+	inferred 165 Multiplexer(s).
+Unit <user_logic> synthesized.
+
+Synthesizing Unit <n3_if_core>.
+    Related source file is "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/verilog/n3_if_core.v".
+        PBIF_START_ADDR = 8'b00000000
+        PBIF_END_ADDR = 8'b00000111
+        PIC_START_ADDR = 8'b00001000
+        PIC_END_ADDR = 8'b00001111
+        simulate = 0
+INFO:Xst:3210 - "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/verilog/n3_if_core.v" line 187: Output port <k_write_strobe> of the instance <N3IFCPU> is unconnected or connected to loadless signal.
+    Found 20-bit register for signal <db_count>.
+    Found 1-bit register for signal <db_clk>.
+    Found 20-bit adder for signal <db_count[19]_GND_41_o_add_9_OUT> created at line 296.
+    Found 8-bit comparator lessequal for signal <n0009> created at line 175
+    Found 8-bit comparator lessequal for signal <n0011> created at line 175
+    Found 8-bit comparator lessequal for signal <n0014> created at line 176
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <n3_if_core> synthesized.
+
+Synthesizing Unit <kcpsm6>.
+    Related source file is "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/verilog/kcpsm6.v".
+        hwbuild = 8'b00000000
+        interrupt_vector = 12'b001111111111
+        scratch_pad_memory_size = 64
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <reset_lut>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <run_flop>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <internal_reset_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <sync_sleep_flop>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <t_state_lut>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <t_state1_flop>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <t_state2_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE0" for instance <int_enable_type_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE0" for instance <interrupt_enable_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE0" for instance <interrupt_enable_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <sync_interrupt_flop>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <active_interrupt_lut>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <active_interrupt_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <interrupt_ack_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE0" for instance <pc_move_is_valid_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE0" for instance <move_type_lut>.
+    Set property "HBLKNM = KCPSM6_VECTOR1" for instance <pc_mode1_lut>.
+    Set property "HBLKNM = KCPSM6_VECTOR1" for instance <pc_mode2_lut>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <push_pop_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <alu_decode0_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <alu_mux_sel0_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <alu_decode1_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <alu_mux_sel1_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <alu_decode2_lut>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <register_enable_type_lut>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <register_enable_lut>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <flag_enable_flop>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <register_enable_flop>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <spm_enable_lut>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <k_write_strobe_flop>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <spm_enable_flop>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <read_strobe_lut>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <write_strobe_flop>.
+    Set property "HBLKNM = KCPSM6_STROBES" for instance <read_strobe_flop>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <regbank_type_lut>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <bank_lut>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <bank_flop>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <sx_addr4_flop>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <arith_carry_xorcy>.
+    Set property "HBLKNM = KCPSM6_CONTROL" for instance <arith_carry_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <lower_parity_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <parity_muxcy>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <upper_parity_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE2" for instance <parity_xorcy>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <shift_carry_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <shift_carry_flop>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <carry_flag_lut>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <carry_flag_flop>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <init_zero_muxcy>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <use_zero_flag_lut>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <use_zero_flag_flop>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <lower_zero_lut>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <lower_zero_muxcy>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <middle_zero_lut>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <middle_zero_muxcy>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <upper_zero_lut>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <upper_zero_muxcy>.
+    Set property "HBLKNM = KCPSM6_FLAGS" for instance <zero_flag_flop>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <address_loop[0].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_VECTOR0" for instance <address_loop[0].output_data.pc_vector_mux_lut>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[0].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[0].lsb_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[0].lsb_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[0].lsb_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <address_loop[1].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[1].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[1].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[1].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[1].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <address_loop[2].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_VECTOR0" for instance <address_loop[2].output_data.pc_vector_mux_lut>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[2].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[2].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[2].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[2].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <address_loop[3].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[3].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[3].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[3].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC0" for instance <address_loop[3].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[4].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_VECTOR0" for instance <address_loop[4].output_data.pc_vector_mux_lut>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[4].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[4].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[4].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[4].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[5].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[5].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[5].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[5].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[5].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[6].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_VECTOR0" for instance <address_loop[6].output_data.pc_vector_mux_lut>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[6].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[6].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[6].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[6].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[7].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[7].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[7].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[7].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC1" for instance <address_loop[7].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[8].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_VECTOR1" for instance <address_loop[8].output_data.pc_vector_mux_lut>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[8].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[8].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[8].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[8].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[9].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[9].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[9].upper_pc.high_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[9].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[9].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[10].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_VECTOR1" for instance <address_loop[10].output_data.pc_vector_mux_lut>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[10].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[10].upper_pc.low_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[10].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[10].upper_pc.mid_pc.pc_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <address_loop[11].return_vector_flop>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[11].pc_flop>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[11].upper_pc.low_int_vector.pc_lut>.
+    Set property "HBLKNM = KCPSM6_PC2" for instance <address_loop[11].upper_pc.pc_xorcy>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <shadow_carry_flag_flop>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <stack_zero_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <shadow_zero_flag_flop>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <shadow_bank_flop>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <stack_bit_flop>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM0" for instance <stack_ram_low>.
+    Set property "HBLKNM = KCPSM6_STACK_RAM1" for instance <stack_ram_high>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[0].lsb_stack.pointer_flop>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[0].lsb_stack.stack_pointer_lut>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[0].lsb_stack.stack_xorcy>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[0].lsb_stack.stack_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[1].upper_stack.pointer_flop>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[1].upper_stack.stack_pointer_lut>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[1].upper_stack.stack_xorcy>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[1].upper_stack.stack_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[2].upper_stack.pointer_flop>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[2].upper_stack.stack_pointer_lut>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[2].upper_stack.stack_xorcy>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[2].upper_stack.stack_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[3].upper_stack.pointer_flop>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[3].upper_stack.stack_pointer_lut>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[3].upper_stack.stack_xorcy>.
+    Set property "HBLKNM = KCPSM6_STACK0" for instance <stack_loop[3].upper_stack.stack_muxcy>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <stack_loop[4].upper_stack.pointer_flop>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <stack_loop[4].upper_stack.stack_pointer_lut>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <stack_loop[4].upper_stack.stack_xorcy>.
+    Set property "HBLKNM = KCPSM6_STACK1" for instance <stack_loop[4].upper_stack.stack_muxcy>.
+    Set property "HBLKNM = KCPSM6_PORT_ID" for instance <data_path_loop[0].output_data.sy_kk_mux_lut>.
+    Set property "HBLKNM = KCPSM6_OUT_PORT" for instance <data_path_loop[0].second_operand.out_port_lut>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[0].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[0].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[0].lsb_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[0].lsb_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[0].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_DECODE1" for instance <data_path_loop[0].lsb_shift_rotate.shift_bit_lut>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[0].lsb_shift_rotate.shift_rotate_lut>.
+    Set property "HBLKNM = KCPSM6_ALU0" for instance <data_path_loop[0].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM0" for instance <data_path_loop[0].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[1].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[1].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[1].upper_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[1].upper_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[1].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_ALU0" for instance <data_path_loop[1].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM0" for instance <data_path_loop[1].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_PORT_ID" for instance <data_path_loop[2].output_data.sy_kk_mux_lut>.
+    Set property "HBLKNM = KCPSM6_OUT_PORT" for instance <data_path_loop[2].second_operand.out_port_lut>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[2].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[2].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[2].upper_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[2].upper_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[2].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[2].mid_shift_rotate.shift_rotate_lut>.
+    Set property "HBLKNM = KCPSM6_ALU0" for instance <data_path_loop[2].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM0" for instance <data_path_loop[2].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[3].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[3].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[3].upper_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD0" for instance <data_path_loop[3].upper_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[3].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_ALU0" for instance <data_path_loop[3].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM0" for instance <data_path_loop[3].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_PORT_ID" for instance <data_path_loop[4].output_data.sy_kk_mux_lut>.
+    Set property "HBLKNM = KCPSM6_OUT_PORT" for instance <data_path_loop[4].second_operand.out_port_lut>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[4].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[4].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[4].upper_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[4].upper_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[4].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[4].mid_shift_rotate.shift_rotate_lut>.
+    Set property "HBLKNM = KCPSM6_ALU1" for instance <data_path_loop[4].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM1" for instance <data_path_loop[4].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[5].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[5].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[5].upper_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[5].upper_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[5].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_ALU1" for instance <data_path_loop[5].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM1" for instance <data_path_loop[5].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_PORT_ID" for instance <data_path_loop[6].output_data.sy_kk_mux_lut>.
+    Set property "HBLKNM = KCPSM6_OUT_PORT" for instance <data_path_loop[6].second_operand.out_port_lut>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[6].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[6].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[6].upper_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[6].upper_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[6].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[6].msb_shift_rotate.shift_rotate_lut>.
+    Set property "HBLKNM = KCPSM6_ALU1" for instance <data_path_loop[6].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM1" for instance <data_path_loop[6].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[7].arith_logical_lut>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[7].arith_logical_flop>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[7].upper_arith_logical.arith_logical_muxcy>.
+    Set property "HBLKNM = KCPSM6_ADD1" for instance <data_path_loop[7].upper_arith_logical.arith_logical_xorcy>.
+    Set property "HBLKNM = KCPSM6_SANDR" for instance <data_path_loop[7].low_hwbuild.shift_rotate_flop>.
+    Set property "HBLKNM = KCPSM6_ALU1" for instance <data_path_loop[7].alu_mux_lut>.
+    Set property "HBLKNM = KCPSM6_SPM1" for instance <data_path_loop[7].small_spm.spm_flop>.
+    Set property "HBLKNM = KCPSM6_REG0" for instance <lower_reg_banks>.
+    Set property "HBLKNM = KCPSM6_REG1" for instance <upper_reg_banks>.
+    Summary:
+	no macro.
+Unit <kcpsm6> synthesized.
+
+Synthesizing Unit <n3ifpgm>.
+    Related source file is "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/verilog/n3ifpgm.v".
+        C_JTAG_LOADER_ENABLE = 1
+        C_FAMILY = "S6"
+        C_RAM_SIZE_KWORDS = 1
+        BRAM_ADDRESS_WIDTH = 10
+    Summary:
+	no macro.
+Unit <n3ifpgm> synthesized.
+
+Synthesizing Unit <jtag_loader_6>.
+    Related source file is "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/verilog/n3ifpgm.v".
+        C_JTAG_LOADER_ENABLE = 1
+        C_FAMILY = "S6"
+        C_NUM_PICOBLAZE = 1
+        C_BRAM_MAX_ADDR_WIDTH = 10
+        C_PICOBLAZE_INSTRUCTION_DATA_WIDTH = 18
+        C_JTAG_CHAIN = 2
+        C_ADDR_WIDTH_0 = 5'b01010
+        C_ADDR_WIDTH_1 = 5'b01010
+        C_ADDR_WIDTH_2 = 5'b01010
+        C_ADDR_WIDTH_3 = 5'b01010
+        C_ADDR_WIDTH_4 = 5'b01010
+        C_ADDR_WIDTH_5 = 5'b01010
+        C_ADDR_WIDTH_6 = 5'b01010
+        C_ADDR_WIDTH_7 = 5'b01010
+    Found 1-bit register for signal <bram_ce>.
+    Found 1-bit register for signal <jtag_we_int>.
+    Found 1-bit register for signal <jtag_addr_int<0>>.
+    Found 1-bit register for signal <jtag_addr_int<1>>.
+    Found 1-bit register for signal <jtag_addr_int<2>>.
+    Found 1-bit register for signal <jtag_addr_int<3>>.
+    Found 1-bit register for signal <jtag_addr_int<4>>.
+    Found 1-bit register for signal <jtag_addr_int<5>>.
+    Found 1-bit register for signal <jtag_addr_int<6>>.
+    Found 1-bit register for signal <jtag_addr_int<7>>.
+    Found 1-bit register for signal <jtag_addr_int<8>>.
+    Found 1-bit register for signal <jtag_addr_int<9>>.
+    Found 1-bit register for signal <jtag_din_int<0>>.
+    Found 1-bit register for signal <jtag_din_int<1>>.
+    Found 1-bit register for signal <jtag_din_int<2>>.
+    Found 1-bit register for signal <jtag_din_int<3>>.
+    Found 1-bit register for signal <jtag_din_int<4>>.
+    Found 1-bit register for signal <jtag_din_int<5>>.
+    Found 1-bit register for signal <jtag_din_int<6>>.
+    Found 1-bit register for signal <jtag_din_int<7>>.
+    Found 1-bit register for signal <jtag_din_int<8>>.
+    Found 1-bit register for signal <jtag_din_int<9>>.
+    Found 1-bit register for signal <jtag_din_int<10>>.
+    Found 1-bit register for signal <jtag_din_int<11>>.
+    Found 1-bit register for signal <jtag_din_int<12>>.
+    Found 1-bit register for signal <jtag_din_int<13>>.
+    Found 1-bit register for signal <jtag_din_int<14>>.
+    Found 1-bit register for signal <jtag_din_int<15>>.
+    Found 1-bit register for signal <jtag_din_int<16>>.
+    Found 1-bit register for signal <jtag_din_int<17>>.
+    Found 8-bit register for signal <control_dout_int>.
+    Found 1-bit register for signal <picoblaze_reset_int>.
+    Found 1-bit register for signal <control_reg_ce>.
+    Summary:
+	inferred  40 D-type flip-flop(s).
+	inferred  27 Multiplexer(s).
+Unit <jtag_loader_6> synthesized.
+
+Synthesizing Unit <pblaze_simple_pic>.
+    Related source file is "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/verilog/pblaze_simple_pic.v".
+        is = 8
+WARNING:Xst:647 - Input <AddrIn<7:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Rd_Strobe> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Int_ack> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <mask>.
+    Found 8-bit register for signal <edgen>.
+    Found 8-bit register for signal <pol>.
+    Found 8-bit register for signal <pending>.
+    Found 8-bit register for signal <dirq>.
+    Found 8-bit register for signal <irq_event>.
+    Found 1-bit register for signal <intff>.
+    Found 8-bit register for signal <lirq>.
+    Found 8-bit 4-to-1 multiplexer for signal <DataOut> created at line 227.
+    Summary:
+	inferred  57 D-type flip-flop(s).
+	inferred  26 Multiplexer(s).
+Unit <pblaze_simple_pic> synthesized.
+
+Synthesizing Unit <rotary_filter>.
+    Related source file is "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/verilog/rotary_filter.v".
+    Found 1-bit register for signal <rotary_b_int>.
+    Found 1-bit register for signal <rotary_q1>.
+    Found 1-bit register for signal <rotary_q2>.
+    Found 1-bit register for signal <delay_rotary_q1>.
+    Found 1-bit register for signal <rotary_event>.
+    Found 1-bit register for signal <rotary_left>.
+    Found 1-bit register for signal <rotary_a_int>.
+    Summary:
+	inferred   7 D-type flip-flop(s).
+Unit <rotary_filter> synthesized.
+
+Synthesizing Unit <pblaze_if>.
+    Related source file is "X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/hdl/verilog/pblaze_if.v".
+WARNING:Xst:647 - Input <AddrIn<7:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Rd_Strobe> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <btn_sw_out>.
+    Found 8-bit register for signal <rotary_status>.
+    Found 8-bit register for signal <lcd_ctl>.
+    Found 8-bit register for signal <lcd_dbus>.
+    Found 8-bit register for signal <rotary_count_lo>.
+    Found 8-bit register for signal <rotary_count_hi>.
+    Found 8-bit register for signal <lcd_status>.
+    Found 8-bit register for signal <leds_out>.
+    Found 8-bit register for signal <DataOut>.
+    Found 8-bit 8-to-1 multiplexer for signal <AddrIn[2]_leds_in[7]_wide_mux_1_OUT> created at line 50.
+    Summary:
+	inferred  72 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <pblaze_if> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 20-bit adder                                          : 1
+ 9-bit subtractor                                      : 1
+# Registers                                            : 183
+ 1-bit register                                        : 143
+ 10-bit register                                       : 1
+ 16-bit register                                       : 2
+ 2-bit register                                        : 3
+ 20-bit register                                       : 1
+ 3-bit register                                        : 1
+ 32-bit register                                       : 6
+ 4-bit register                                        : 3
+ 6-bit register                                        : 1
+ 8-bit register                                        : 21
+ 9-bit register                                        : 1
+# Comparators                                          : 3
+ 8-bit comparator lessequal                            : 3
+# Multiplexers                                         : 249
+ 1-bit 2-to-1 multiplexer                              : 232
+ 18-bit 2-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 5
+ 8-bit 2-to-1 multiplexer                              : 8
+ 8-bit 4-to-1 multiplexer                              : 1
+ 8-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <n3_if_core>.
+The following registers are absorbed into counter <db_count>: 1 register on signal <db_count>.
+Unit <n3_if_core> synthesized (advanced).
+WARNING:Xst:2677 - Node <addr_out_s_h_5> of sequential type is unconnected in block <plb_address_decoder>.
+WARNING:Xst:2677 - Node <addr_out_s_h_4> of sequential type is unconnected in block <plb_address_decoder>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 9-bit subtractor                                      : 1
+# Counters                                             : 1
+ 20-bit up counter                                     : 1
+# Registers                                            : 661
+ Flip-Flops                                            : 661
+# Comparators                                          : 3
+ 8-bit comparator lessequal                            : 3
+# Multiplexers                                         : 246
+ 1-bit 2-to-1 multiplexer                              : 215
+ 1-bit 4-to-1 multiplexer                              : 8
+ 1-bit 8-to-1 multiplexer                              : 8
+ 18-bit 2-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 5
+ 8-bit 2-to-1 multiplexer                              : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch master_id_31 hinder the constant cleaning in the block plb_slave_attachment.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1293 - FF/Latch <master_id_30> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_29> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_28> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_27> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_26> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_25> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_24> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_23> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_22> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_21> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_20> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_19> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_18> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_17> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_16> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_15> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_14> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_13> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_12> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_11> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_10> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_9> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_8> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_7> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_6> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_5> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_4> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_3> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_2> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_1> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <GEN_FOR_SHARED.addr_cntl_cs> in Unit <plb_slave_attachment> is equivalent to the following FF/Latch, which will be removed : <addr_cycle_flush> 
+INFO:Xst:2261 - The FF/Latch <lirq_3> in Unit <pblaze_simple_pic> is equivalent to the following 5 FFs/Latches, which will be removed : <lirq_4> <lirq_5> <lirq_6> <lirq_7> <lirq_8> 
+WARNING:Xst:1710 - FF/Latch <lirq_3> (without init value) has a constant value of 0 in block <pblaze_simple_pic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dirq_3> (without init value) has a constant value of 0 in block <pblaze_simple_pic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dirq_4> (without init value) has a constant value of 0 in block <pblaze_simple_pic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dirq_5> (without init value) has a constant value of 0 in block <pblaze_simple_pic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dirq_6> (without init value) has a constant value of 0 in block <pblaze_simple_pic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dirq_7> (without init value) has a constant value of 0 in block <pblaze_simple_pic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dirq_8> (without init value) has a constant value of 0 in block <pblaze_simple_pic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <control_dout_int_1> (without init value) has a constant value of 0 in block <jtag_loader_6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <control_dout_int_2> (without init value) has a constant value of 0 in block <jtag_loader_6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <control_dout_int_5> (without init value) has a constant value of 0 in block <jtag_loader_6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <control_dout_int_6> (without init value) has a constant value of 0 in block <jtag_loader_6>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <system_n3eif_0_wrapper> ...
+
+Optimizing unit <kcpsm6> ...
+
+Optimizing unit <user_logic> ...
+
+Optimizing unit <n3_if_core> ...
+
+Optimizing unit <pblaze_if> ...
+
+Optimizing unit <rotary_filter> ...
+
+Optimizing unit <jtag_loader_6> ...
+
+Optimizing unit <pblaze_simple_pic> ...
+
+Optimizing unit <plb_slave_attachment> ...
+
+Optimizing unit <plb_address_decoder> ...
+
+Optimizing unit <counter_f> ...
+WARNING:Xst:1710 - FF/Latch <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_0> (without init value) has a constant value of 0 in block <system_n3eif_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_1> (without init value) has a constant value of 0 in block <system_n3eif_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_0> (without init value) has a constant value of 0 in block <system_n3eif_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_1> (without init value) has a constant value of 0 in block <system_n3eif_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <n3eif_0/USER_LOGIC_I/N3IF/PBIF/lcd_ctl_7> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/USER_LOGIC_I/N3IF/PBIF/lcd_ctl_6> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/USER_LOGIC_I/N3IF/PBIF/lcd_ctl_5> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/USER_LOGIC_I/N3IF/PBIF/lcd_ctl_4> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/USER_LOGIC_I/N3IF/PBIF/lcd_ctl_3> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_0> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_1> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_2> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_3> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_4> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_5> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_6> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_7> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_8> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_9> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_10> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_11> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_12> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_13> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_14> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_15> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_16> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_17> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_18> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_19> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_20> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_21> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_22> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_23> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_24> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_25> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_26> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_27> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_28> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_29> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_30> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_31> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_16> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_17> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_18> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_19> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_20> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_21> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_22> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_23> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_24> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_25> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_30> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_31> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i_10> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i_11> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i_12> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i_13> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i_14> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i_15> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_10> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_11> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_12> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_13> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_14> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_15> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:2677 - Node <n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN<0>.GEN_PLB_SHARED.cs_out_s_h_0> of sequential type is unconnected in block <system_n3eif_0_wrapper>.
+WARNING:Xst:1293 - FF/Latch <n3eif_0/USER_LOGIC_I/N3IF/db_count_19> has a constant value of 0 in block <system_n3eif_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <n3eif_0/USER_LOGIC_I/N3IF/db_count_18> has a constant value of 0 in block <system_n3eif_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <n3eif_0/USER_LOGIC_I/N3IF/db_count_17> has a constant value of 0 in block <system_n3eif_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/sync_sleep_flop> has a constant value of 0 in block <system_n3eif_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/sync_sleep_flop> has a constant value of 0 in block <system_n3eif_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/sync_sleep_flop> has a constant value of 0 in block <system_n3eif_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/sync_sleep_flop> has a constant value of 0 in block <system_n3eif_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/sync_sleep_flop> has a constant value of 0 in block <system_n3eif_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+WARNING:Xst:1293 - FF/Latch <n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/sync_sleep_flop> has a constant value of 0 in block <system_n3eif_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/sync_sleep_flop> has a constant value of 0 in block <system_n3eif_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/sync_sleep_flop> has a constant value of 0 in block <system_n3eif_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block system_n3eif_0_wrapper, actual ratio is 9.
+WARNING:Xst:1293 - FF/Latch <n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/sync_sleep_flop> has a constant value of 0 in block <system_n3eif_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/sync_sleep_flop> has a constant value of 0 in block <system_n3eif_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/sync_sleep_flop> has a constant value of 0 in block <system_n3eif_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 564
+ Flip-Flops                                            : 564
+
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/sync_sleep_flop> has a constant value of 0 in block <system_n3eif_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/sync_sleep_flop> has a constant value of 0 in block <system_n3eif_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : system_n3eif_0_wrapper.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 629
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 16
+#      LUT2                        : 13
+#      LUT3                        : 26
+#      LUT4                        : 210
+#      LUT5                        : 88
+#      LUT6                        : 130
+#      LUT6_2                      : 50
+#      MUXCY                       : 45
+#      MUXF7                       : 3
+#      VCC                         : 1
+#      XORCY                       : 44
+# FlipFlops/Latches                : 564
+#      FD                          : 72
+#      FDC                         : 8
+#      FDCE                        : 66
+#      FDE                         : 47
+#      FDPE                        : 9
+#      FDR                         : 312
+#      FDRE                        : 44
+#      FDS                         : 6
+# RAMS                             : 7
+#      RAM32M                      : 4
+#      RAM64M                      : 2
+#      RAMB16BWER                  : 1
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# Others                           : 1
+#      BSCAN_SPARTAN6              : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             564  out of  18224     3%  
+ Number of Slice LUTs:                  559  out of   9112     6%  
+    Number used as Logic:               535  out of   9112     5%  
+    Number used as Memory:               24  out of   2176     1%  
+       Number used as RAM:               24
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    783
+   Number with an unused Flip Flop:     219  out of    783    27%  
+   Number with an unused LUT:           224  out of    783    28%  
+   Number of fully used LUT-FF pairs:   340  out of    783    43%  
+   Number of unique control sets:        33
+
+IO Utilization: 
+ Number of IOs:                         231
+ Number of bonded IOBs:                   0  out of    232     0%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                                | Clock buffer(FF name)                                                                           | Load  |
+----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+-------+
+SPLB_Clk                                                                    | NONE(n3eif_0/USER_LOGIC_I/slv_reg8_24)                                                          | 535   |
+n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/jtag_clk                                  | NONE(n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/control_dout_int_7)| 6     |
+n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/drck| BUFG                                                                                            | 31    |
+----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 8.912ns (Maximum Frequency: 112.212MHz)
+   Minimum input arrival time before clock: 2.854ns
+   Maximum output required time after clock: 1.026ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'SPLB_Clk'
+  Clock period: 8.912ns (frequency: 112.212MHz)
+  Total number of paths / destination ports: 18540 / 812
+-------------------------------------------------------------------------
+Delay:               8.912ns (Levels of Logic = 8)
+  Source:            n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/ram_1k_generate.s6.kcpsm6_rom (RAM)
+  Destination:       n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/zero_flag_flop (FF)
+  Source Clock:      SPLB_Clk rising
+  Destination Clock: SPLB_Clk rising
+
+  Data Path: n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/ram_1k_generate.s6.kcpsm6_rom to n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/zero_flag_flop
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWER:CLKA->DOA12   16   1.850   1.004  n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/ram_1k_generate.s6.kcpsm6_rom (n3eif_0/USER_LOGIC_I/N3IF/instruction<12>)
+     LUT6_2:I4->O6        11   0.568   1.130  n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/data_path_loop[2].output_data.sy_kk_mux_lut (n3eif_0/USER_LOGIC_I/N3IF/port_id<3>)
+     LUT5:I1->O           13   0.203   1.037  n3eif_0/USER_LOGIC_I/N3IF/Mmux_in_port111 (n3eif_0/USER_LOGIC_I/N3IF/Mmux_in_port11)
+     LUT3:I1->O            1   0.203   0.827  n3eif_0/USER_LOGIC_I/N3IF/Mmux_in_port1 (n3eif_0/USER_LOGIC_I/N3IF/in_port<0>)
+     LUT6:I2->O            3   0.320   0.650  n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/data_path_loop[0].alu_mux_lut (n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/alu_result<0>)
+     LUT6_2:I0->O6         1   0.568   0.000  n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/lower_zero_lut (n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/lower_zero_sel)
+     MUXCY:S->O            1   0.172   0.000  n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/lower_zero_muxcy (n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/carry_lower_zero)
+     MUXCY:CI->O           1   0.019   0.000  n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/middle_zero_muxcy (n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/carry_middle_zero)
+     MUXCY:CI->O           1   0.258   0.000  n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/upper_zero_muxcy (n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/zero_flag_value)
+     FDRE:D                    0.102          n3eif_0/USER_LOGIC_I/N3IF/N3IFCPU/zero_flag_flop
+    ----------------------------------------
+    Total                      8.912ns (4.263ns logic, 4.649ns route)
+                                       (47.8% logic, 52.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/jtag_clk'
+  Clock period: 1.747ns (frequency: 572.328MHz)
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               1.747ns (Levels of Logic = 1)
+  Source:            n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/picoblaze_reset_int_0 (FF)
+  Destination:       n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/picoblaze_reset_int_0 (FF)
+  Source Clock:      n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/jtag_clk rising
+  Destination Clock: n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/jtag_clk rising
+
+  Data Path: n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/picoblaze_reset_int_0 to n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/picoblaze_reset_int_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.995  n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/picoblaze_reset_int_0 (n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/picoblaze_reset_int_0)
+     LUT5:I0->O            1   0.203   0.000  n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/picoblaze_reset_int_0_rstpot (n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/picoblaze_reset_int_0_rstpot)
+     FD:D                      0.102          n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/picoblaze_reset_int_0
+    ----------------------------------------
+    Total                      1.747ns (0.752ns logic, 0.995ns route)
+                                       (43.0% logic, 57.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/drck'
+  Clock period: 3.365ns (frequency: 297.217MHz)
+  Total number of paths / destination ports: 85 / 48
+-------------------------------------------------------------------------
+Delay:               3.365ns (Levels of Logic = 1)
+  Source:            n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/bram_ce_0 (FF)
+  Destination:       n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/jtag_din_int_17 (FF)
+  Source Clock:      n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/drck rising
+  Destination Clock: n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/drck rising
+
+  Data Path: n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/bram_ce_0 to n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/jtag_din_int_17
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             21   0.447   1.342  n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/bram_ce_0 (n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/bram_ce_0)
+     LUT4:I1->O           18   0.205   1.049  n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/_n0186_inv1 (n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/_n0186_inv)
+     FDE:CE                    0.322          n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/jtag_din_int_0
+    ----------------------------------------
+    Total                      3.365ns (0.974ns logic, 2.391ns route)
+                                       (28.9% logic, 71.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SPLB_Clk'
+  Total number of paths / destination ports: 472 / 472
+-------------------------------------------------------------------------
+Offset:              2.155ns (Levels of Logic = 1)
+  Source:            SPLB_Rst (PAD)
+  Destination:       n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_0 (FF)
+  Destination Clock: SPLB_Clk rising
+
+  Data Path: SPLB_Rst to n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT3:I0->O           32   0.205   1.291  n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/ip2bus_rdack_i_data_timeout_AND_17_o_inv_01 (n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/ip2bus_rdack_i_data_timeout_AND_17_o_inv_0)
+     FDR:R                     0.430          n3eif_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_31
+    ----------------------------------------
+    Total                      2.155ns (0.864ns logic, 1.291ns route)
+                                       (40.1% logic, 59.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/jtag_clk'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              2.431ns (Levels of Logic = 1)
+  Source:            n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_SPARTAN6_gen.BSCAN_BLOCK_inst:SEL (PAD)
+  Destination:       n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/control_dout_int_7 (FF)
+  Destination Clock: n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/jtag_clk rising
+
+  Data Path: n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_SPARTAN6_gen.BSCAN_BLOCK_inst:SEL to n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/control_dout_int_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN6:SEL    21   0.000   1.114  n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_SPARTAN6_gen.BSCAN_BLOCK_inst (n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/bram_ce_valid)
+     LUT3:I2->O            4   0.205   0.683  n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/bram_ce_valid_control_reg_ce_AND_22_o_inv1 (n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/bram_ce_valid_control_reg_ce_AND_22_o_inv)
+     FDR:R                     0.430          n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/control_dout_int_0
+    ----------------------------------------
+    Total                      2.431ns (0.635ns logic, 1.796ns route)
+                                       (26.1% logic, 73.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/drck'
+  Total number of paths / destination ports: 86 / 50
+-------------------------------------------------------------------------
+Offset:              2.854ns (Levels of Logic = 1)
+  Source:            n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_SPARTAN6_gen.BSCAN_BLOCK_inst:SHIFT (PAD)
+  Destination:       n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/jtag_din_int_17 (FF)
+  Destination Clock: n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/drck rising
+
+  Data Path: n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_SPARTAN6_gen.BSCAN_BLOCK_inst:SHIFT to n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/jtag_din_int_17
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN6:SHIFT   31   0.000   1.278  n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_SPARTAN6_gen.BSCAN_BLOCK_inst (n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/shift)
+     LUT4:I3->O           18   0.205   1.049  n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/_n0186_inv1 (n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/_n0186_inv)
+     FDE:CE                    0.322          n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/jtag_din_int_0
+    ----------------------------------------
+    Total                      2.854ns (0.527ns logic, 2.327ns route)
+                                       (18.5% logic, 81.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SPLB_Clk'
+  Total number of paths / destination ports: 60 / 60
+-------------------------------------------------------------------------
+Offset:              0.447ns (Levels of Logic = 0)
+  Source:            n3eif_0/USER_LOGIC_I/N3IF/PBIF/leds_out_7 (FF)
+  Destination:       leds_out<7> (PAD)
+  Source Clock:      SPLB_Clk rising
+
+  Data Path: n3eif_0/USER_LOGIC_I/N3IF/PBIF/leds_out_7 to leds_out<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              0   0.447   0.000  n3eif_0/USER_LOGIC_I/N3IF/PBIF/leds_out_7 (n3eif_0/USER_LOGIC_I/N3IF/PBIF/leds_out_7)
+    ----------------------------------------
+    Total                      0.447ns (0.447ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/drck'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.026ns (Levels of Logic = 0)
+  Source:            n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/jtag_din_int_17 (FF)
+  Destination:       n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_SPARTAN6_gen.BSCAN_BLOCK_inst:TDO (PAD)
+  Source Clock:      n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/drck rising
+
+  Data Path: n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/jtag_din_int_17 to n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_SPARTAN6_gen.BSCAN_BLOCK_inst:TDO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.579  n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/jtag_din_int_17 (n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/jtag_din_int_17)
+    BSCAN_SPARTAN6:TDO         0.000          n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/jtag_loader_gen.BSCAN_SPARTAN6_gen.BSCAN_BLOCK_inst
+    ----------------------------------------
+    Total                      1.026ns (0.447ns logic, 0.579ns route)
+                                       (43.6% logic, 56.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock SPLB_Clk
+------------------------------------------+---------+---------+---------+---------+
+                                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------------+---------+---------+---------+---------+
+SPLB_Clk                                  |    8.912|         |         |         |
+n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/jtag_clk|    2.654|         |         |         |
+------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/drck
+----------------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------------------------------------------+---------+---------+---------+---------+
+n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/drck|    3.365|         |         |         |
+n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/jtag_clk                                  |    2.982|         |         |         |
+----------------------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/jtag_clk
+----------------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------------------------------------------+---------+---------+---------+---------+
+n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/instantiate_loader.jtag_loader_6_inst/drck|    2.766|         |         |         |
+n3eif_0/USER_LOGIC_I/N3IF/N3IFPGM/jtag_clk                                  |    1.747|         |         |         |
+----------------------------------------------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 17.97 secs
+ 
+--> 
+
+Total memory usage is 162640 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  162 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

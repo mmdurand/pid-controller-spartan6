@@ -1,0 +1,88 @@
+
+Checking platform configuration ...
+IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 8 slave(s) 
+IPNAME: lmb_v10, INSTANCE: ilmb - 1 master(s) : 1 slave(s) 
+IPNAME: lmb_v10, INSTANCE: dlmb - 1 master(s) : 1 slave(s) 
+
+Checking port drivers...
+WARNING:EDK:4181 - PORT: ICACHE_FSL_IN_CLK, CONNECTOR:
+   microblaze_0_IXCL_FSL_S_Clk - floating connection -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_40_b\d
+   ata\microblaze_v2_1_0.mpd line 987 
+WARNING:EDK:4181 - PORT: ICACHE_FSL_OUT_CLK, CONNECTOR:
+   microblaze_0_IXCL_FSL_M_Clk - floating connection -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_40_b\d
+   ata\microblaze_v2_1_0.mpd line 992 
+WARNING:EDK:4181 - PORT: DCACHE_FSL_IN_CLK, CONNECTOR:
+   microblaze_0_DXCL_FSL_S_Clk - floating connection -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_40_b\d
+   ata\microblaze_v2_1_0.mpd line 997 
+WARNING:EDK:4181 - PORT: DCACHE_FSL_OUT_CLK, CONNECTOR:
+   microblaze_0_DXCL_FSL_M_Clk - floating connection -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_40_b\d
+   ata\microblaze_v2_1_0.mpd line 1002 
+
+Performing Clock DRCs...
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_D_PLB value to 1 -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_40_b\d
+   ata\microblaze_v2_1_0.mpd line 231 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_I_PLB value to 1 -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_40_b\d
+   ata\microblaze_v2_1_0.mpd line 234 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ADDR_TAG_BITS value to 11 -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_40_b\d
+   ata\microblaze_v2_1_0.mpd line 335 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_DCACHE_ADDR_TAG value to 11 -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_40_b\d
+   ata\microblaze_v2_1_0.mpd line 365 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_USE_INTERRUPT value to 1 -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_40_b\d
+   ata\microblaze_v2_1_0.mpd line 399 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_USE_EXT_BRK value to 1 -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_40_b\d
+   ata\microblaze_v2_1_0.mpd line 400 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_USE_EXT_NM_BRK value to 1 -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_40_b\d
+   ata\microblaze_v2_1_0.mpd line 401 
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:dlmb_cntlr - tcl is
+   overriding PARAMETER C_MASK value to 0x80000000 -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3
+   _10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:ilmb_cntlr - tcl is
+   overriding PARAMETER C_MASK value to 0x80000000 -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3
+   _10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tcl is overriding
+   PARAMETER C_KIND_OF_INTR value to 0b11111111111111111111111111111111 -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v2_01_a\dat
+   a\xps_intc_v2_1_0.mpd line 88 
+INFO:EDK:4130 - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tcl is overriding
+   PARAMETER C_KIND_OF_EDGE value to 0b11111111111111111111111111111111 -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v2_01_a\dat
+   a\xps_intc_v2_1_0.mpd line 89 
+INFO:EDK:4130 - IPNAME: xps_intc, INSTANCE:xps_intc_0 - tcl is overriding
+   PARAMETER C_KIND_OF_LVL value to 0b11111111111111111111111111111111 -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v2_01_a\dat
+   a\xps_intc_v2_1_0.mpd line 90 
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+Conversion to XML complete.
