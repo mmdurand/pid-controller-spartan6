@@ -578,6 +578,7 @@ int DoTest_BB(void)
 	Xfloat32    setpoint_volts, adc_reading_volts;
 
 	//The initial state of the PWM is derived from the global "init_high" flag.
+	// true if inital state of test should be full-on, false otherwise
 	if(init_high == 1)
 		pwm_duty = PWM_STEPDC_MAX;
 	else
