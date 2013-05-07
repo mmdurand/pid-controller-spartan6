@@ -311,8 +311,8 @@ int main() {
 	// start the set point in the middle of the range	
 	setpoint = (ADC_max_cnt - ADC_min_cnt) / 2;
 	offset = 100;
-	GP = 20;
-	GD = 10;
+	GP = 10;
+	GD = 5;
 	GI = 5;
 	init_high = false;
 	//*****GAIN AND OFFSET ARE HARDWIRED IN THE STARTER APP *****
@@ -660,7 +660,106 @@ int DoTest_BB(void)
  *****/
 int DoTest_PID(void)
 {
-	return 0;
+	XStatus Status; // Xilinx return status
+	unsigned tss; // starting timestamp
+	u16 adc_1, adc_2; // holds the ADC count - sampled twice and averaged
+	u16 adc_cnt; // ADC counts to display
+	int n; // number of samples
+	Xfloat32 setpoint_volts, adc_reading_volts;
+	Xfloat32 derivate, integral,prev_error, error, pwm_output;
+
+
+
+	//The initial state of the PWM is derived from the global "init_high" flag.
+	// true if inital state of test should be full-on, false otherwise
+	if (init_high == true)
+		pwm_duty = PWM_STEPDC_MAX;
+	else
+		pwm_duty = PWM_STEPDC_MIN;
+
+	//Checks Status
+	Status = PWM_SetParams(&PWMTimerInst, pwm_freq, pwm_duty);
+	if (Status == XST_SUCCESS)
+	{
+		PWM_Start(&PWMTimerInst);
+	}
+	else {
+			return -1;
+		}
+	delay_msecs(100);
+
+	smpl_idx = 0;
+	n = 0;
+	tss = timestamp;
+	derivate = 0;
+	integral = 0;
+	prev_error = 0;
+	error = 0;
+
+	//Calculate in volts our setpoint
+	setpoint_volts = PmodCtlSys_ADCVolts(setpoint);
+	////-------------------------------
+	LCD_clrd();
+	LCD_setcursor(1, 0);
+	LCD_wrstring("PID CNTLR");
+
+	while(smpl_idx <= NUM_ADC_SAMPLES)
+	{
+		//CHECK STATUS
+		Status = PWM_SetParams(&PWMTimerInst, pwm_freq, pwm_duty);
+		if (Status == XST_SUCCESS)
+		{
+			PWM_Start(&PWMTimerInst);
+		}
+		else
+		{
+			return -1;
+		}
+
+		//Sample the ADC and average the readings
+		adc_1 = PmodCtlSys_readADC(&SPIInst);
+		delay_msecs(1);
+		adc_2 = PmodCtlSys_readADC(&SPIInst);
+		adc_cnt = (adc_1 + adc_2) / 2;
+
+		//Converting the ADC average into volts
+		adc_reading_volts = PmodCtlSys_ADCVolts(adc_cnt + offset);
+
+		error = (setpoint_volts - adc_reading_volts);		// calculate error
+		derivate = (error - prev_error);					// calculate derivative
+		prev_error = error;								// for next pass through loop
+
+		if((error) < setpoint_volts/10)
+			integral = integral + error;
+		else
+			integral = 0;
+
+		pwm_output =( error* GP ) + (derivate * GD) + (integral * GI);
+		pwm_duty = offset + (int)(pwm_output);
+
+		if(pwm_duty < PWM_STEPDC_MIN)
+		   pwm_duty = PWM_STEPDC_MIN;
+
+		if(pwm_duty > PWM_STEPDC_MAX)
+		   pwm_duty = PWM_STEPDC_MAX;
+
+		//CHECK STATUS
+		Status = PWM_SetParams(&PWMTimerInst, pwm_freq, pwm_duty);
+		if (Status == XST_SUCCESS)
+		{
+			PWM_Start(&PWMTimerInst);
+		 }
+		else
+		{
+			return -1;
+		}
+		//store in array
+		sample[smpl_idx++] = adc_cnt;
+		n++;
+	}
+	adc_smple_interval = (timestamp - tss) / smpl_idx;
+	return n;
+
 }
 
 /*****
