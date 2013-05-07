@@ -1,4 +1,4 @@
-Release 14.4 - Bitgen P.49d (nt)
+Release 14.4 - Bitgen P.49d (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 PMSPEC -- Overriding Xilinx file
 <C:/Xilinx/14.4/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
@@ -8,9 +8,9 @@ C:\Xilinx\14.4\ISE_DS\ISE\;C:\Xilinx\14.4\ISE_DS\EDK.
    "system" is an NCD, version 3.2, device xc6slx16, package csg324, speed -3
 Opened constraints file system.pcf.
 
-Sun May 05 22:04:52 2013
+Mon May 06 00:07:38 2013
 
-C:\Xilinx\14.4\ISE_DS\ISE\bin\nt\unwrapped\bitgen.exe -w -g TdoPin:PULLNONE -g StartUpClk:JTAGCLK system.ncd 
+C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -w -g TdoPin:PULLNONE -g StartUpClk:JTAGCLK system.ncd 
 
 Summary of Bitgen Options:
 +----------------------+----------------------+

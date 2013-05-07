@@ -1,15 +1,18 @@
 Release 14.4 - platgen Xilinx EDK 14.4 Build EDK_P.49d
- (nt)
+ (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 Command Line: platgen -p xc6slx16csg324-3 -lang vhdl -intstyle default -lp
-X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE5
-44_Repository_14_4 -msg __xps/ise/xmsgprops.lst system.mhs 
+C:/544projects/ECE544_Repository_14_4/ECE544_Repository_14_4 -msg
+__xps/ise/xmsgprops.lst system.mhs 
 
-Parse X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/system.mhs ...
+Parse C:/544projects/pid-controller/embsys/system.mhs ...
 
 Read MPD definitions ...
-
+WARNING:EDK:2343 - Search path
+   C:\544projects\ECE544_Repository_14_4\ECE544_Repository_14_4\ directly
+   contains pcores directory. Search path should point to a directory two levels
+   above pcores.
 Overriding IP level properties ...
 
 Computing clock values...
@@ -94,19 +97,16 @@ INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:xps_gpio_0 - tool is overriding
    a\xps_gpio_v2_1_0.mpd line 82 
 INFO:EDK:4130 - IPNAME: n3eif, INSTANCE:n3eif_0 - tool is overriding PARAMETER
    C_SPLB_DWIDTH value to 32 -
-   X:\Documents\Embedded_Systems_Xilinx\project1_release_r1.0\project1_release\E
-   CE544_Repository_14_4\MyProcessorIPLib\pcores\n3eif_v1_00_a\data\n3eif_v2_1_0
-   .mpd line 28 
+   C:\544projects\ECE544_Repository_14_4\ECE544_Repository_14_4\MyProcessorIPLib
+   \pcores\n3eif_v1_00_a\data\n3eif_v2_1_0.mpd line 28 
 INFO:EDK:4130 - IPNAME: n3eif, INSTANCE:n3eif_0 - tool is overriding PARAMETER
    C_SPLB_NUM_MASTERS value to 2 -
-   X:\Documents\Embedded_Systems_Xilinx\project1_release_r1.0\project1_release\E
-   CE544_Repository_14_4\MyProcessorIPLib\pcores\n3eif_v1_00_a\data\n3eif_v2_1_0
-   .mpd line 29 
+   C:\544projects\ECE544_Repository_14_4\ECE544_Repository_14_4\MyProcessorIPLib
+   \pcores\n3eif_v1_00_a\data\n3eif_v2_1_0.mpd line 29 
 INFO:EDK:4130 - IPNAME: n3eif, INSTANCE:n3eif_0 - tool is overriding PARAMETER
    C_SPLB_MID_WIDTH value to 1 -
-   X:\Documents\Embedded_Systems_Xilinx\project1_release_r1.0\project1_release\E
-   CE544_Repository_14_4\MyProcessorIPLib\pcores\n3eif_v1_00_a\data\n3eif_v2_1_0
-   .mpd line 30 
+   C:\544projects\ECE544_Repository_14_4\ECE544_Repository_14_4\MyProcessorIPLib
+   \pcores\n3eif_v1_00_a\data\n3eif_v2_1_0.mpd line 30 
 INFO:EDK:4130 - IPNAME: xps_spi, INSTANCE:xps_spi_0 - tool is overriding
    PARAMETER C_SPLB_NUM_MASTERS value to 2 -
    C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_spi_v2_02_a\data
@@ -227,14 +227,61 @@ Creating hardware output directories ...
 Managing hardware (BBD-specified) netlist files ...
 
 Managing cache ...
+IPNAME:microblaze INSTANCE:microblaze_0 -
+C:\544projects\pid-controller\embsys\system.mhs line 54 - Copying cache
+implementation netlist
+IPNAME:plb_v46 INSTANCE:mb_plb - C:\544projects\pid-controller\embsys\system.mhs
+line 81 - Copying cache implementation netlist
+IPNAME:lmb_v10 INSTANCE:ilmb - C:\544projects\pid-controller\embsys\system.mhs
+line 88 - Copying cache implementation netlist
+IPNAME:lmb_v10 INSTANCE:dlmb - C:\544projects\pid-controller\embsys\system.mhs
+line 95 - Copying cache implementation netlist
+IPNAME:lmb_bram_if_cntlr INSTANCE:dlmb_cntlr -
+C:\544projects\pid-controller\embsys\system.mhs line 102 - Copying cache
+implementation netlist
+IPNAME:lmb_bram_if_cntlr INSTANCE:ilmb_cntlr -
+C:\544projects\pid-controller\embsys\system.mhs line 111 - Copying cache
+implementation netlist
+IPNAME:bram_block INSTANCE:lmb_bram -
+C:\544projects\pid-controller\embsys\system.mhs line 120 - Copying cache
+implementation netlist
+IPNAME:xps_uartlite INSTANCE:rs232_uart_1 -
+C:\544projects\pid-controller\embsys\system.mhs line 127 - Copying cache
+implementation netlist
+IPNAME:xps_mch_emc INSTANCE:micron_ram -
+C:\544projects\pid-controller\embsys\system.mhs line 141 - Copying cache
+implementation netlist
+IPNAME:mem_bus_mux INSTANCE:mem_bus_mux_0 -
+C:\544projects\pid-controller\embsys\system.mhs line 173 - Copying cache
+implementation netlist
+IPNAME:xps_timer INSTANCE:xps_timer_0 -
+C:\544projects\pid-controller\embsys\system.mhs line 198 - Copying cache
+implementation netlist
+IPNAME:mdm INSTANCE:mdm_0 - C:\544projects\pid-controller\embsys\system.mhs line
+225 - Copying cache implementation netlist
+IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
+C:\544projects\pid-controller\embsys\system.mhs line 237 - Copying cache
+implementation netlist
+IPNAME:xps_intc INSTANCE:xps_intc_0 -
+C:\544projects\pid-controller\embsys\system.mhs line 250 - Copying cache
+implementation netlist
+IPNAME:fit_timer INSTANCE:fit_timer_0 -
+C:\544projects\pid-controller\embsys\system.mhs line 260 - Copying cache
+implementation netlist
+IPNAME:xps_gpio INSTANCE:xps_gpio_0 -
+C:\544projects\pid-controller\embsys\system.mhs line 269 - Copying cache
+implementation netlist
+IPNAME:n3eif INSTANCE:n3eif_0 - C:\544projects\pid-controller\embsys\system.mhs
+line 279 - Copying cache implementation netlist
+IPNAME:xps_spi INSTANCE:xps_spi_0 -
+C:\544projects\pid-controller\embsys\system.mhs line 299 - Copying cache
+implementation netlist
 
 Elaborating instances ...
 IPNAME:bram_block INSTANCE:lmb_bram -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 120 -
-elaborating IP
+C:\544projects\pid-controller\embsys\system.mhs line 120 - elaborating IP
 IPNAME:clock_generator INSTANCE:clock_generator_0 -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 210 -
-elaborating IP
+C:\544projects\pid-controller\embsys\system.mhs line 210 - elaborating IP
 ClkGen elaborate status: PASSED
 ----------------------------------------
 ----------------------------------------
@@ -245,7 +292,7 @@ Inserting wrapper level ...
 Completion time: 1.00 seconds
 
 Constructing platform-level connectivity ...
-Completion time: 0.00 seconds
+Completion time: 1.00 seconds
 
 Writing (top-level) BMM ...
 
@@ -258,84 +305,18 @@ Running XST synthesis ...
 INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
-INSTANCE:microblaze_0 -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 54 -
-Running XST synthesis
-INSTANCE:mb_plb -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 81 -
-Running XST synthesis
-INSTANCE:ilmb -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 88 -
-Running XST synthesis
-INSTANCE:dlmb -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 95 -
-Running XST synthesis
-INSTANCE:dlmb_cntlr -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 102 -
-Running XST synthesis
-INSTANCE:ilmb_cntlr -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 111 -
-Running XST synthesis
-INSTANCE:lmb_bram -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 120 -
-Running XST synthesis
-INSTANCE:rs232_uart_1 -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 127 -
-Running XST synthesis
-INSTANCE:micron_ram -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 141 -
-Running XST synthesis
-INSTANCE:mem_bus_mux_0 -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 173 -
-Running XST synthesis
-INSTANCE:xps_timer_0 -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 198 -
-Running XST synthesis
-INSTANCE:clock_generator_0 -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 210 -
-Running XST synthesis
-INSTANCE:mdm_0 -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 225 -
-Running XST synthesis
-INSTANCE:proc_sys_reset_0 -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 237 -
-Running XST synthesis
-INSTANCE:xps_intc_0 -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 250 -
-Running XST synthesis
-INSTANCE:fit_timer_0 -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 260 -
-Running XST synthesis
-INSTANCE:xps_gpio_0 -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 269 -
-Running XST synthesis
-INSTANCE:n3eif_0 -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 279 -
-Running XST synthesis
-INSTANCE:xps_spi_0 -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 299 -
+INSTANCE:clock_generator_0 - C:\544projects\pid-controller\embsys\system.mhs
+line 210 - Running XST synthesis
+INSTANCE:n3eif_0 - C:\544projects\pid-controller\embsys\system.mhs line 279 -
 Running XST synthesis
 
 Running NGCBUILD ...
-IPNAME:system_microblaze_0_wrapper INSTANCE:microblaze_0 -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 54 -
-Running NGCBUILD
-IPNAME:system_ilmb_wrapper INSTANCE:ilmb -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 88 -
-Running NGCBUILD
-IPNAME:system_dlmb_wrapper INSTANCE:dlmb -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 95 -
-Running NGCBUILD
 IPNAME:system_clock_generator_0_wrapper INSTANCE:clock_generator_0 -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 210 -
-Running NGCBUILD
-IPNAME:system_xps_intc_0_wrapper INSTANCE:xps_intc_0 -
-X:\Documents\Embedded_Systems_Xilinx\PID_Project\embsys\system.mhs line 250 -
-Running NGCBUILD
+C:\544projects\pid-controller\embsys\system.mhs line 210 - Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
    the data/system.ucf file.
 
 Rebuilding cache ...
 
-Total run time: 608.00 seconds
+Total run time: 137.00 seconds

@@ -5,18 +5,18 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../PmodCtlSys.c \
-../pwm_tmrctr.c \
-../test_PmodCtlSys_r2.c 
+../project2_starter.c \
+../pwm_tmrctr.c 
 
 OBJS += \
 ./PmodCtlSys.o \
-./pwm_tmrctr.o \
-./test_PmodCtlSys_r2.o 
+./project2_starter.o \
+./pwm_tmrctr.o 
 
 C_DEPS += \
 ./PmodCtlSys.d \
-./pwm_tmrctr.d \
-./test_PmodCtlSys_r2.d 
+./project2_starter.d \
+./pwm_tmrctr.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

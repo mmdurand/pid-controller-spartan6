@@ -6,7 +6,7 @@
 @REM #
 @REM # Command line for ngdbuild
 @REM #
-ngdbuild -p xc6slx16csg324-3 -nt timestamp -bm system.bmm "X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system.ngc" -uc system.ucf system.ngd 
+ngdbuild -p xc6slx16csg324-3 -nt timestamp -bm system.bmm "C:/544projects/pid-controller/embsys/implementation/system.ngc" -uc system.ucf system.ngd 
 
 @REM #
 @REM # Command line for map

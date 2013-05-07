@@ -1,8 +1,8 @@
 --------------------------------------------------------------------------------
-Release 14.4 Trace  (nt)
+Release 14.4 Trace  (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-C:\Xilinx\14.4\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -e 3 -xml system.twx
+C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -e 3 -xml system.twx
 system.ncd system.pcf
 
 Design file:              system.ncd
@@ -85,14 +85,14 @@ Design statistics:
    Minimum period:  11.357ns   (Maximum frequency:  88.051MHz)
 
 
-Analysis completed Sun May 05 22:04:40 2013 
+Analysis completed Mon May 06 00:07:17 2013 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 198 MB
+Peak Memory Usage: 335 MB
 
 
 

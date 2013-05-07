@@ -2,4 +2,32 @@
 **** Build of configuration Debug for project PID_controller ****
 
 make all 
-make: Nothing to be done for `all'.
+Building file: ../project2_starter.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.40.b -mno-xl-soft-mul -mhard-float -MMD -MP -MF"project2_starter.d" -MT"project2_starter.d" -o"project2_starter.o" "../project2_starter.c"
+Finished building: ../project2_starter.c
+' '
+Building target: PID_controller.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,--no-relax -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.40.b -mno-xl-soft-mul -mhard-float -o"PID_controller.elf"  ./PmodCtlSys.o ./project2_starter.o ./pwm_tmrctr.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PID_controller.elf
+' '
+Invoking: MicroBlaze Print Size
+mb-size PID_controller.elf  |tee "PID_controller.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  38238	    396	   5852	  44486	   adc6	PID_controller.elf
+Finished building: PID_controller.elf.size
+' '
+Invoking: Xilinx ELF Check
+elfcheck PID_controller.elf -hw ../../embsys_hw_platform/system.xml -pe microblaze_0  |tee "PID_controller.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.4 Build EDK_P.49d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../embsys_hw_platform/system.xml -pe microblaze_0
+PID_controller.elf 
+
+ELF file	: PID_controller.elf
+elfcheck passed.
+Finished building: PID_controller.elf.elfcheck
+' '
