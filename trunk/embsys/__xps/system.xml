@@ -1,6 +1,7 @@
-<EDKSYSTEM EDKVERSION="14.4" EDWVERSION="1.2" TIMESTAMP="Sun May 05 21:52:29 2013">
 
-  <SYSTEMINFO ARCH="spartan6" DEVICE="xc6slx16" PACKAGE="csg324" PART="xc6slx16csg324-3" SOURCE="X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/system.xmp" SPEEDGRADE="-3"/>
+<EDKSYSTEM EDKVERSION="14.4" EDWVERSION="1.2" TIMESTAMP="Sun May 05 23:54:26 2013">
+
+  <SYSTEMINFO ARCH="spartan6" DEVICE="xc6slx16" PACKAGE="csg324" PART="xc6slx16csg324-3" SOURCE="C:/544projects/pid-controller/embsys/system.xmp" SPEEDGRADE="-3"/>
 
   <MODULES>
     <MODULE HWVERSION="8.40.b" INSTANCE="microblaze_0" IPTYPE="PROCESSOR" MHS_INDEX="0" MODCLASS="PROCESSOR" MODTYPE="microblaze" PROCTYPE="MICROBLAZE">
@@ -8304,7 +8305,7 @@
       <DESCRIPTION TYPE="SHORT">N3EIF</DESCRIPTION>
       <DESCRIPTION TYPE="LONG">This peripheral provides the interface to the Digilent Nexys 3 pushbuttons</DESCRIPTION>
       <DOCUMENTATION>
-        <DOCUMENT SOURCE="X:/Documents/Embedded_Systems_Xilinx/project1_release_r1.0/project1_release/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/doc/N3EIF_UG_r1.0.pdf" TYPE="IP"/>
+        <DOCUMENT SOURCE="C:/544projects/ECE544_Repository_14_4/ECE544_Repository_14_4/MyProcessorIPLib/pcores/n3eif_v1_00_a/doc/N3EIF_UG_r1.0.pdf" TYPE="IP"/>
       </DOCUMENTATION>
       <PARAMETERS>
         <PARAMETER ADDRESS="BASE" ADDR_TYPE="REGISTER" ASSIGNMENT="OPTIONAL" CHANGEDBY="USER" IS_INSTANTIATED="TRUE" MHS_INDEX="2" MPD_INDEX="0" NAME="C_BASEADDR" TYPE="std_logic_vector" VALUE="0xcb000000"/>

@@ -1,4 +1,4 @@
-Release 14.4 Xflow P.49d (nt)
+Release 14.4 Xflow P.49d (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 xflow.exe -wd implementation -p xc6slx16csg324-3 -implement xflow.opt system.ngc
  
@@ -6,91 +6,86 @@ PMSPEC -- Overriding Xilinx file
 <C:/Xilinx/14.4/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
 <C:/Xilinx/14.4/ISE_DS/ISE/spartan6/data/spartan6.acd>
 
-Using Flow File:
-X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/fpga.flw 
+Using Flow File: C:/544projects/pid-controller/embsys/implementation/fpga.flw 
 Using Option File(s): 
- X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/xflow.op
-t 
+ C:/544projects/pid-controller/embsys/implementation/xflow.opt 
 
 Creating Script File ... 
 
 #----------------------------------------------#
 # Starting program ngdbuild
 # ngdbuild -p xc6slx16csg324-3 -nt timestamp -bm system.bmm
-"X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system.n
-gc" -uc system.ucf system.ngd 
+"C:/544projects/pid-controller/embsys/implementation/system.ngc" -uc system.ucf
+system.ngd 
 #----------------------------------------------#
-Release 14.4 - ngdbuild P.49d (nt)
+Release 14.4 - ngdbuild P.49d (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 PMSPEC -- Overriding Xilinx file
 <C:/Xilinx/14.4/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
 <C:/Xilinx/14.4/ISE_DS/ISE/spartan6/data/spartan6.acd>
 
-Command Line: C:\Xilinx\14.4\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -p
+Command Line: C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe -p
 xc6slx16csg324-3 -nt timestamp -bm system.bmm
-X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system.ng
-c -uc system.ucf system.ngd
+C:/544projects/pid-controller/embsys/implementation/system.ngc -uc system.ucf
+system.ngd
 
 Reading NGO file
-"X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system.n
-gc" ...
+"C:/544projects/pid-controller/embsys/implementation/system.ngc" ...
 Loading design module
-"X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system_n
-3eif_0_wrapper.ngc"...
+"C:/544projects/pid-controller/embsys/implementation/system_n3eif_0_wrapper.ngc"
+...
 Loading design module
-"X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system_r
-s232_uart_1_wrapper.ngc"...
+"C:/544projects/pid-controller/embsys/implementation/system_rs232_uart_1_wrapper
+.ngc"...
 Loading design module
-"X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system_c
-lock_generator_0_wrapper.ngc"...
+"C:/544projects/pid-controller/embsys/implementation/system_clock_generator_0_wr
+apper.ngc"...
 Loading design module
-"X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system_p
-roc_sys_reset_0_wrapper.ngc"...
+"C:/544projects/pid-controller/embsys/implementation/system_proc_sys_reset_0_wra
+pper.ngc"...
 Loading design module
-"X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system_x
-ps_spi_0_wrapper.ngc"...
+"C:/544projects/pid-controller/embsys/implementation/system_xps_spi_0_wrapper.ng
+c"...
 Loading design module
-"X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system_m
-icroblaze_0_wrapper.ngc"...
+"C:/544projects/pid-controller/embsys/implementation/system_microblaze_0_wrapper
+.ngc"...
 Loading design module
-"X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system_m
-b_plb_wrapper.ngc"...
+"C:/544projects/pid-controller/embsys/implementation/system_mb_plb_wrapper.ngc".
+..
 Loading design module
-"X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system_i
-lmb_wrapper.ngc"...
+"C:/544projects/pid-controller/embsys/implementation/system_ilmb_wrapper.ngc"...
 Loading design module
-"X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system_d
-lmb_wrapper.ngc"...
+"C:/544projects/pid-controller/embsys/implementation/system_dlmb_wrapper.ngc"...
 Loading design module
-"X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system_d
-lmb_cntlr_wrapper.ngc"...
+"C:/544projects/pid-controller/embsys/implementation/system_dlmb_cntlr_wrapper.n
+gc"...
 Loading design module
-"X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system_i
-lmb_cntlr_wrapper.ngc"...
+"C:/544projects/pid-controller/embsys/implementation/system_ilmb_cntlr_wrapper.n
+gc"...
 Loading design module
-"X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system_m
-icron_ram_wrapper.ngc"...
+"C:/544projects/pid-controller/embsys/implementation/system_micron_ram_wrapper.n
+gc"...
 Loading design module
-"X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system_x
-ps_timer_0_wrapper.ngc"...
+"C:/544projects/pid-controller/embsys/implementation/system_xps_timer_0_wrapper.
+ngc"...
 Loading design module
-"X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system_m
-dm_0_wrapper.ngc"...
+"C:/544projects/pid-controller/embsys/implementation/system_mdm_0_wrapper.ngc"..
+.
 Loading design module
-"X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system_x
-ps_intc_0_wrapper.ngc"...
+"C:/544projects/pid-controller/embsys/implementation/system_xps_intc_0_wrapper.n
+gc"...
 Loading design module
-"X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system_f
-it_timer_0_wrapper.ngc"...
+"C:/544projects/pid-controller/embsys/implementation/system_fit_timer_0_wrapper.
+ngc"...
 Loading design module
-"X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system_x
-ps_gpio_0_wrapper.ngc"...
+"C:/544projects/pid-controller/embsys/implementation/system_xps_gpio_0_wrapper.n
+gc"...
 Loading design module
-"X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system_l
-mb_bram_wrapper.ngc"...
+"C:/544projects/pid-controller/embsys/implementation/system_lmb_bram_wrapper.ngc
+"...
 Loading design module
-"X:/Documents/Embedded_Systems_Xilinx/PID_Project/embsys/implementation/system_m
-em_bus_mux_0_wrapper.ngc"...
+"C:/544projects/pid-controller/embsys/implementation/system_mem_bus_mux_0_wrappe
+r.ngc"...
 Gathering constraint information from source properties...
 Done.
 
@@ -301,8 +296,8 @@ NGDBUILD Design Results Summary:
   Number of warnings:  57
 
 Writing NGD file "system.ngd" ...
-Total REAL time to NGDBUILD completion:  35 sec
-Total CPU time to NGDBUILD completion:   32 sec
+Total REAL time to NGDBUILD completion: 1 min  5 sec
+Total CPU time to NGDBUILD completion:  1 min  4 sec
 
 Writing NGDBUILD log file "system.bld"...
 
@@ -314,7 +309,7 @@ NGDBUILD done.
 # Starting program map
 # map -o system_map.ncd -w -pr b -ol high -timing -detail system.ngd system.pcf 
 #----------------------------------------------#
-Release 14.4 - Map P.49d (nt)
+Release 14.4 - Map P.49d (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 PMSPEC -- Overriding Xilinx file
 <C:/Xilinx/14.4/ISE_DS/EDK/data/Xdh_PrimTypeLib.xda> with local file
@@ -482,34 +477,34 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 31 secs 
-Total CPU  time at the beginning of Placer: 27 secs 
+Total REAL time at the beginning of Placer: 48 secs 
+Total CPU  time at the beginning of Placer: 40 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:34f8909e) REAL time: 36 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:34f8909e) REAL time: 54 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:34f8909e) REAL time: 37 secs 
+Phase 2.7  Design Feasibility Check (Checksum:34f8909e) REAL time: 56 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:e69c89e6) REAL time: 37 secs 
+Phase 3.31  Local Placement Optimization (Checksum:e69c89e6) REAL time: 56 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:46d602ca) REAL time: 46 secs 
+(Checksum:46d602ca) REAL time: 1 mins 9 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:46d602ca) REAL time: 46 secs 
+Phase 5.36  Local Placement Optimization (Checksum:46d602ca) REAL time: 1 mins 9 secs 
 
 Phase 6.30  Global Clock Region Assignment
-Phase 6.30  Global Clock Region Assignment (Checksum:46d602ca) REAL time: 46 secs 
+Phase 6.30  Global Clock Region Assignment (Checksum:46d602ca) REAL time: 1 mins 9 secs 
 
 Phase 7.3  Local Placement Optimization
-Phase 7.3  Local Placement Optimization (Checksum:46d602ca) REAL time: 47 secs 
+Phase 7.3  Local Placement Optimization (Checksum:46d602ca) REAL time: 1 mins 9 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:46d602ca) REAL time: 47 secs 
+Phase 8.5  Local Placement Optimization (Checksum:46d602ca) REAL time: 1 mins 10 secs 
 
 Phase 9.8  Global Placement
 ........................
@@ -517,22 +512,22 @@ Phase 9.8  Global Placement
 ...................................................................................................
 ..................................................................
 .........................................................
-Phase 9.8  Global Placement (Checksum:264d44d0) REAL time: 1 mins 59 secs 
+Phase 9.8  Global Placement (Checksum:264d44d0) REAL time: 2 mins 48 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:264d44d0) REAL time: 1 mins 59 secs 
+Phase 10.5  Local Placement Optimization (Checksum:264d44d0) REAL time: 2 mins 48 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:64bce6f8) REAL time: 2 mins 12 secs 
+Phase 11.18  Placement Optimization (Checksum:64bce6f8) REAL time: 3 mins 7 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:64bce6f8) REAL time: 2 mins 12 secs 
+Phase 12.5  Local Placement Optimization (Checksum:64bce6f8) REAL time: 3 mins 8 secs 
 
 Phase 13.34  Placement Validation
-Phase 13.34  Placement Validation (Checksum:2f30a708) REAL time: 2 mins 13 secs 
+Phase 13.34  Placement Validation (Checksum:2f30a708) REAL time: 3 mins 9 secs 
 
-Total REAL time to Placer completion: 2 mins 14 secs 
-Total CPU  time to Placer completion: 2 mins 4 secs 
+Total REAL time to Placer completion: 3 mins 9 secs 
+Total CPU  time to Placer completion: 2 mins 58 secs 
 Running post-placement packing...
 Writing output files...
 
@@ -624,9 +619,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                3.71
 
-Peak Memory Usage:  314 MB
-Total REAL time to MAP completion:  2 mins 21 secs 
-Total CPU time to MAP completion:   2 mins 11 secs 
+Peak Memory Usage:  519 MB
+Total REAL time to MAP completion:  3 mins 22 secs 
+Total CPU time to MAP completion:   3 mins 10 secs 
 
 Mapping completed.
 See MAP report file "system_map.mrp" for details.
@@ -637,7 +632,7 @@ See MAP report file "system_map.mrp" for details.
 # Starting program par
 # par -w -ol high system_map.ncd system.ncd system.pcf 
 #----------------------------------------------#
-Release 14.4 - par P.49d (nt)
+Release 14.4 - par P.49d (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 PMSPEC -- Overriding Xilinx file <C:/Xilinx/14.4/ISE_DS/EDK/data/parBmgr.acd> with local file
 <C:/Xilinx/14.4/ISE_DS/ISE/data/parBmgr.acd>
@@ -745,8 +740,8 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 13 secs 
-Finished initial Timing Analysis.  REAL time: 13 secs 
+Starting initial Timing Analysis.  REAL time: 20 secs 
+Finished initial Timing Analysis.  REAL time: 20 secs 
 
 WARNING:Par:288 - The signal
    microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[14].ram32m_i_RAMD_D1_O has no
@@ -816,29 +811,29 @@ WARNING:Par:288 - The signal
 Starting Router
 
 
-Phase  1  : 29402 unrouted;      REAL time: 15 secs 
+Phase  1  : 29402 unrouted;      REAL time: 23 secs 
 
-Phase  2  : 24736 unrouted;      REAL time: 17 secs 
+Phase  2  : 24736 unrouted;      REAL time: 26 secs 
 
-Phase  3  : 10847 unrouted;      REAL time: 39 secs 
+Phase  3  : 10847 unrouted;      REAL time: 59 secs 
 
-Phase  4  : 10847 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 41 secs 
+Phase  4  : 10847 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 1 secs 
 
 Updating file: system.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 6 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 39 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 6 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 39 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 6 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 39 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 6 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 39 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 6 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 39 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 9 secs 
-Total REAL time to Router completion: 1 mins 9 secs 
-Total CPU time to Router completion: 1 mins 6 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 43 secs 
+Total REAL time to Router completion: 1 mins 43 secs 
+Total CPU time to Router completion: 1 mins 42 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -935,10 +930,10 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 23 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 1 mins 15 secs 
-Total CPU time to PAR completion: 1 mins 12 secs 
+Total REAL time to PAR completion: 1 mins 49 secs 
+Total CPU time to PAR completion: 1 mins 48 secs 
 
-Peak Memory Usage:  287 MB
+Peak Memory Usage:  467 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
@@ -960,7 +955,7 @@ PAR done!
 # Starting program post_par_trce
 # trce -e 3 -xml system.twx system.ncd system.pcf 
 #----------------------------------------------#
-Release 14.4 - Trace  (nt)
+Release 14.4 - Trace  (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
@@ -971,10 +966,10 @@ Loading device for application Rf_Device from file '6slx16.nph' in environment
 C:\Xilinx\14.4\ISE_DS\ISE\;C:\Xilinx\14.4\ISE_DS\EDK.
    "system" is an NCD, version 3.2, device xc6slx16, package csg324, speed -3
 --------------------------------------------------------------------------------
-Release 14.4 Trace  (nt)
+Release 14.4 Trace  (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-C:\Xilinx\14.4\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -e 3 -xml system.twx
+C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -e 3 -xml system.twx
 system.ncd system.pcf
 
 
@@ -1002,13 +997,13 @@ Design statistics:
    Minimum period:  11.357ns (Maximum frequency:  88.051MHz)
 
 
-Analysis completed Sun May 05 22:04:40 2013
+Analysis completed Mon May 06 00:07:17 2013
 --------------------------------------------------------------------------------
 
 Generating Report ...
 
 Number of warnings: 0
 Number of info messages: 3
-Total time: 19 secs 
+Total time: 28 secs 
 
 
