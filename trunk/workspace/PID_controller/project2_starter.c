@@ -579,7 +579,7 @@ int DoTest_BB(void)
 
 	//The initial state of the PWM is derived from the global "init_high" flag.
 	// true if inital state of test should be full-on, false otherwise
-	if(init_high == 1)
+	if(init_high == true)
 		pwm_duty = PWM_STEPDC_MAX;
 	else
 		pwm_duty = PWM_STEPDC_MIN;
@@ -602,10 +602,25 @@ int DoTest_BB(void)
 
 	//Calculate in volts our setpoint
 	setpoint_volts =PmodCtlSys_ADCVolts(setpoint);
-
+    ////-------------------------------
+	LCD_clrd();
+	LCD_setcursor(1,0);
+	LCD_wrstring("BANG BANG");
+	delay_msecs(10000);
+	LCD_setcursor(1,4);
+	LCD_putnum(smpl_idx, 5);
+	LCD_setcursor(1,8);
+	LCD_wrstring(" S2");
+	LCD_setcursor(1,11);
+	////-------------------------------
 	while (smpl_idx <= NUM_ADC_SAMPLES)
 	{
-		Status = PWM_SetParams(&PWMTimerInst, pwm_freq, smpl_idx);
+		//-------------------------
+		LCD_setcursor(2,0);
+		LCD_wrstring("P1");
+		LCD_putnum(pwm_duty, 5);
+		//-------------------------
+		Status = PWM_SetParams(&PWMTimerInst, pwm_freq, pwm_duty);
 		if (Status == XST_SUCCESS)
 		{
 			PWM_Start(&PWMTimerInst);
@@ -625,12 +640,18 @@ int DoTest_BB(void)
 		adc_reading_volts = PmodCtlSys_ADCVolts(adc_cnt);
 
 		if(adc_reading_volts < setpoint_volts)
-			pwm_duty = PWM_STEPDC_MIN; //input to 0% duty cycle
+			pwm_duty = PWM_STEPDC_MAX; //input to 100% duty cycle
 		else
-			pwm_duty = PWM_STEPDC_MAX;
+			pwm_duty = PWM_STEPDC_MIN;
 
+		//-------------------------
+				LCD_setcursor(2,7);
+				LCD_wrstring("P2");
+				LCD_putnum(pwm_duty, 5);
+				delay_msecs(500);
+		//-------------------------
 		///CHECK STATUS
-		Status = PWM_SetParams(&PWMTimerInst, pwm_freq, smpl_idx);
+		Status = PWM_SetParams(&PWMTimerInst, pwm_freq, pwm_duty);
 		if (Status == XST_SUCCESS)
 		{
 			PWM_Start(&PWMTimerInst);
@@ -643,11 +664,6 @@ int DoTest_BB(void)
 		sample[smpl_idx ++] = adc_cnt;
         n++;
 	}
-
-
-
-	/////////////
-
 	adc_smple_interval = (timestamp - tss) / smpl_idx;
 	return n;
 
