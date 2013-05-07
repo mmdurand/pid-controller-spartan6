@@ -565,13 +565,12 @@ int main() {
 int DoTest_BB(void)
 {
 
-	XStatus Status; // Xilinx return status
-	unsigned tss; // starting timestamp
-	u16 adc_1, adc_2; // holds the ADC count - sampled twice and averaged
-	u16 adc_cnt; // ADC counts to display
-	int n; // number of samples
-	//Xuint32		freq, dutyfactor;		// current frequency and duty factor
-	Xfloat32 setpoint_volts, adc_reading_volts;
+	XStatus Status;         // Xilinx return status
+	unsigned tss;           // starting timestamp
+	u16 adc_1, adc_2; 		// holds the ADC count - sampled twice and averaged
+	u16 adc_cnt; 			// ADC counts to display
+	int n; 					// number of samples
+    Xfloat32 setpoint_volts, adc_reading_volts;
 
 	//The initial state of the PWM is derived from the global "init_high" flag.
 	// true if inital state of test should be full-on, false otherwise
@@ -587,9 +586,9 @@ int DoTest_BB(void)
 	} else {
 		return -1;
 	}
-	delay_msecs(1000);
-	// sweep the duty cycle from STEPDC_MIN to STEPDC_MAX
-	smpl_idx = PWM_STEPDC_MIN;
+	delay_msecs(100);
+
+	smpl_idx = 0;
 	n = 0;
 	tss = timestamp;
 
@@ -600,14 +599,17 @@ int DoTest_BB(void)
 	LCD_setcursor(1, 0);
 	LCD_wrstring("BANG BANG");
 
-	while (smpl_idx <= NUM_ADC_SAMPLES) {
+	while (smpl_idx <= NUM_ADC_SAMPLES)
+	{
 		Status = PWM_SetParams(&PWMTimerInst, pwm_freq, pwm_duty);
-		if (Status == XST_SUCCESS) {
+		if (Status == XST_SUCCESS)
+		{
 			PWM_Start(&PWMTimerInst);
-		} else {
+		}
+		else {
 			return -1;
 		}
-		/////////////
+
 		//Sample the ADC and average the readings
 		adc_1 = PmodCtlSys_readADC(&SPIInst);
 		delay_msecs(1);
@@ -618,16 +620,18 @@ int DoTest_BB(void)
 		adc_reading_volts = PmodCtlSys_ADCVolts(adc_cnt);
 
 		if (adc_reading_volts < setpoint_volts)
-			pwm_duty = PWM_STEPDC_MAX; //input to 100% duty cycle
+			pwm_duty = PWM_STEPDC_MIN; //input to 100% duty cycle
 		else
-			pwm_duty = PWM_STEPDC_MIN;
-		///CHECK STATUS
+			pwm_duty = PWM_STEPDC_MAX;
+
+		//CHECK STATUS
 		Status = PWM_SetParams(&PWMTimerInst, pwm_freq, pwm_duty);
 		if (Status == XST_SUCCESS) {
 			PWM_Start(&PWMTimerInst);
 		} else {
 			return -1;
 		}
+
 		//store in array
 		sample[smpl_idx++] = adc_cnt;
 		n++;
@@ -695,9 +699,11 @@ int DoTest_Characterize(void) {
 	smpl_idx = PWM_STEPDC_MIN;
 	n = 0;
 	tss = timestamp;
-	while (smpl_idx <= PWM_STEPDC_MAX) {
+	while (smpl_idx <= PWM_STEPDC_MAX)
+	{
 		Status = PWM_SetParams(&PWMTimerInst, pwm_freq, smpl_idx);
-		if (Status == XST_SUCCESS) {
+		if (Status == XST_SUCCESS)
+		{
 			PWM_Start(&PWMTimerInst);
 		} else {
 			return -1;
