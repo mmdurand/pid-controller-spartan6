@@ -438,6 +438,8 @@ int main() {
 		if (button_down)
 		{
 			_prev_button_down_count++;
+			if (_prev_button_down_count > 5)
+				_prev_button_down_count = 5;
 
 			if (north_button) {
 				switch (param_select) {
@@ -460,16 +462,16 @@ int main() {
 			if (east_button) {
 				switch (param_select) {
 					case SLCT_GP:
-						GP++;
+						GP+=_prev_button_down_count;
 						break;
 					case SLCT_GI:
-						GI++;
+						GI+=_prev_button_down_count;
 						break;
 					case SLCT_GD:
-						GD++;
+						GD+=_prev_button_down_count;
 						break;
 					case SLCT_OFFSET:
-						offset++;
+						offset+=_prev_button_down_count;
 						break;					
 				}
 				wrlcd_dynamic = true;
@@ -478,16 +480,16 @@ int main() {
 			if (west_button) {
 				switch (param_select) {
 					case SLCT_GP:
-						GP--;
+						GP-=_prev_button_down_count;
 						break;
 					case SLCT_GI:
-						GI--;
+						GI-=_prev_button_down_count;
 						break;			
 					case SLCT_GD:
-						GD--;
+						GD-=_prev_button_down_count;
 						break;
 					case SLCT_OFFSET:
-						offset--;
+						offset-=_prev_button_down_count;
 						break;					
 				}
 				wrlcd_dynamic = true;
