@@ -211,13 +211,14 @@ int pwm_freq; // PWM frequency
 int pwm_duty; // PWM duty cycle (for BB control)
 int pwm_count; // PWM count (for PID control)
 
-
 //PID debug info
 struct {
 	Xfloat32 err;
 	Xfloat32 vdiff;
 	int pwm_count;
 } PIDdebug[NUM_ADC_SAMPLES];
+
+u16 _prev_button_down_count;
 
 /*---------------------------------------------------------------------------*/
 int debugen = 0; // debug level/flag
@@ -275,7 +276,7 @@ int main() {
 	wrlcd_dynamic = true;
 	wrlcd_static = true;
 	leds = LEDS_ALLOFF;
-
+	_prev_button_down_count = 0;
 	// Enable the Microblaze caches and
 	// kick off the processing by enabling the Microblaze interrupt
 	// this starts the FIT timer which updates the timestamp.
@@ -370,24 +371,24 @@ int main() {
 			// place the cursor under the currently selected parameter
 			LCD_docmd(LCD_DISPLAYONOFF, LCD_CURSOR_OFF);
 			switch (param_select) {
-			case SLCT_OFFSET:
-				row = 2;
-				col = 13;
-				break;
-			case SLCT_GP:
-				row = 1;
-				col = 3;
-				break;
-			case SLCT_GD:
-				row = 1;
-				col = 13;
-				break;
-			case SLCT_GI:
-				row = 1;
-				col = 8;
-				break;
-			case SLCT_INVALID:
-				break;
+				case SLCT_OFFSET:
+					row = 2;
+					col = 13;
+					break;
+				case SLCT_GP:
+					row = 1;
+					col = 3;
+					break;
+				case SLCT_GD:
+					row = 1;
+					col = 13;
+					break;
+				case SLCT_GI:
+					row = 1;
+					col = 8;
+					break;
+				case SLCT_INVALID:
+					break;
 			}
 			if (param_select != SLCT_INVALID) {
 				LCD_setcursor(row, col);
@@ -429,6 +430,72 @@ int main() {
 		//***** run the test selected by the switches                      *****
 
 		// look at the buttons and take action on the rising edge of a button press
+		bool north_button = btnsw & msk_BTN_NORTH;
+		bool east_button = btnsw & msk_BTN_EAST;
+		bool west_button = btnsw & msk_BTN_WEST;
+		bool button_down = north_button || east_button || west_button;
+
+		if (button_down)
+		{
+			_prev_button_down_count++;
+
+			if (north_button) {
+				switch (param_select) {
+					case SLCT_GP:
+						param_select = SLCT_GI;
+						break;
+					case SLCT_GI:
+						param_select = SLCT_GD;
+						break;
+					case SLCT_GD:
+						param_select = SLCT_OFFSET;
+						break;
+					case SLCT_OFFSET:
+						param_select = SLCT_GP;
+						break;					
+				}
+				wrlcd_dynamic = true;
+			}
+
+			if (east_button) {
+				switch (param_select) {
+					case SLCT_GP:
+						GP++;
+						break;
+					case SLCT_GI:
+						GI++;
+						break;
+					case SLCT_GD:
+						GD++;
+						break;
+					case SLCT_OFFSET:
+						offset++;
+						break;					
+				}
+				wrlcd_dynamic = true;
+			}
+
+			if (west_button) {
+				switch (param_select) {
+					case SLCT_GP:
+						GP--;
+						break;
+					case SLCT_GI:
+						GI--;
+						break;			
+					case SLCT_GD:
+						GD--;
+						break;
+					case SLCT_OFFSET:
+						offset--;
+						break;					
+				}
+				wrlcd_dynamic = true;
+			}
+		} else {
+			_prev_button_down_count = 0;
+		}
+
 		btnsw &= BTN_MSK_ALLBUTTONS;
 		diff_btnsw = (btnsw ^ old_btnsw) & btnsw;
 		old_btnsw = btnsw;
@@ -442,26 +509,26 @@ int main() {
 
 			switch (test) // set up for the selected test
 			{
-			case TEST_BB: // Bit Bang control
-				strcpy(s1, "|BB  |Press RBtn");
-				strcpy(s2, "Bit Bang Control Test Data");
-				funcPtr = DoTest_BB;
-				break;
-			case TEST_PID: // PID control
-				strcpy(s1, "|PID |Press RBtn");
-				strcpy(s2, "PID Control Test Data");
-				funcPtr = DoTest_PID;
-				break;
-			case TEST_CHARACTERIZE: // characterize control system simulator
-				strcpy(s1, "|CHAR|Press RBtn");
-				strcpy(s2, "Characterization Test Data");
-				funcPtr = DoTest_Characterize;
-				break;
-			default: // no test to run
-				strcpy(s1, "");
-				strcpy(s2, "");
-				funcPtr = NULL;
-				break;
+				case TEST_BB: // Bit Bang control
+					strcpy(s1, "|BB  |Press RBtn");
+					strcpy(s2, "Bit Bang Control Test Data");
+					funcPtr = DoTest_BB;
+					break;
+				case TEST_PID: // PID control
+					strcpy(s1, "|PID |Press RBtn");
+					strcpy(s2, "PID Control Test Data");
+					funcPtr = DoTest_PID;
+					break;
+				case TEST_CHARACTERIZE: // characterize control system simulator
+					strcpy(s1, "|CHAR|Press RBtn");
+					strcpy(s2, "Characterization Test Data");
+					funcPtr = DoTest_Characterize;
+					break;
+				default: // no test to run
+					strcpy(s1, "");
+					strcpy(s2, "");
+					funcPtr = NULL;
+					break;
 			}
 
 			// Change the display to indicate that a test will be run			
