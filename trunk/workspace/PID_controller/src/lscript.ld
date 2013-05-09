@@ -198,7 +198,7 @@ _SDA2_BASE_ = __sdata2_start + ((__sbss2_end - __sdata2_start) / 2 );
    _heap_start = .;
    . += _HEAP_SIZE;
    _heap_end = .;
-} > ilmb_cntlr_dlmb_cntlr
+} > micron_ram_MEM0_BASEADDR
 
 .stack (NOLOAD) : {
    _stack_end = .;
@@ -206,7 +206,7 @@ _SDA2_BASE_ = __sdata2_start + ((__sbss2_end - __sdata2_start) / 2 );
    . = ALIGN(8);
    _stack = .;
    __stack = _stack;
-} > ilmb_cntlr_dlmb_cntlr
+} > micron_ram_MEM0_BASEADDR
 
 _end = .;
 }

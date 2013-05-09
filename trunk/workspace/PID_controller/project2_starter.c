@@ -729,88 +729,80 @@ int DoTest_BB(void)
  *****/
 int DoTest_PID(void)
 {
-	XStatus Status; 		// Xilinx return status
-	unsigned tss; 			// starting timestamp
-	u16 adc_1, adc_2; 		// holds the ADC count - sampled twice and averaged
-	u16 adc_cnt; 			// ADC counts to display
-	int n; 					// number of samples
-	Xfloat32 derivate, integral,prev_error, error, pwm_output;
+
+	XStatus		Status;					// Xilinx return status
+	unsigned	tss;					// starting timestamp
+	u16		adc_1, adc_2;			// holds the ADC count - sampled twice and averaged
+	u16		adc_cnt;				// ADC counts to display
+	int			n;						// number of samples
+
+	Xfloat32	integral, derivative;	// integral, derivative terms
+	Xfloat32	error, prev_error;			// error and prev error terms
+	Xfloat32	setpoint_volt, currentadc_volt;	// Setpoint and ADC count in volts
 
 	//The initial state of the PWM is derived from the global "init_high" flag.
-	// true if inital state of test should be full-on, false otherwise
-	if (init_high == true)					
-		pwm_duty = PWM_STEPDC_MAX;
+	if(init_high)
+	  pwm_duty = PWM_STEPDC_MIN;
 	else
-		pwm_duty = PWM_STEPDC_MIN;
+	  pwm_duty = PWM_STEPDC_MAX;
 
-	delay_msecs(1000);
+	 // Get the PWM status
+	 Status = PWM_SetParams(&PWMTimerInst, pwm_freq, pwm_duty);
+	 if(Status == XST_SUCCESS)
+	      PWM_Start(&PWMTimerInst);
+	 else
+	     return -1;
 
-	smpl_idx = 0;
-	n = 0;
-	tss = timestamp;
-	derivate = 0;
-	integral = 0;
-	prev_error = 0;
-	error = 0;
+	 delay_msecs(1000);
 
-	LCD_clrd();
-	LCD_setcursor(1, 0);
-	LCD_wrstring("PID CNTLR");
-	u32 min_counts = 0;
-	u32 max_counts = 0;
+	 integral = 0;
+	 derivative = 0;
+	 prev_error = 0;
+	 smpl_idx = 0;
+	 n = 0;
+	 tss = timestamp;
 
-	while(smpl_idx <= NUM_ADC_SAMPLES){
+	setpoint_volt = PmodCtlSys_ADCVolts(setpoint);
 
-		//Sample the ADC and average the readings
-		adc_1 = PmodCtlSys_readADC(&SPIInst);
+	while (smpl_idx <= NUM_ADC_SAMPLES)
+	{
+    	// sample ADC twice and average the readings
+		adc_1=PmodCtlSys_readADC(&SPIInst);
 		delay_msecs(1);
-		adc_2 = PmodCtlSys_readADC(&SPIInst);
+		adc_2=PmodCtlSys_readADC(&SPIInst);
 		adc_cnt = (adc_1 + adc_2) / 2;
 
-		error = (setpoint - adc_cnt);					// calculate error
-		derivate = (error - prev_error);				// calculate derivative
-		prev_error = error;								// for next pass through loop
+		currentadc_volt = PmodCtlSys_ADCVolts( adc_cnt + offset);
 
-		if((error) < setpoint/10)
-			integral = integral + error;
+		// calculate error: Negate the value to avoid -ve PID control parameters
+		error = currentadc_volt - setpoint_volt;
+		derivative = error - prev_error;
+		prev_error = error;
+		if (abs(error) < setpoint_volt/10)
+			integral += error;
 		else
 			integral = 0;
 
-		pwm_output = adc_cnt + ( error* GP ) + (derivate * GD) + (integral * GI);
-		pwm_duty = (int)(pwm_output*100)/4096;
+		pwm_duty = (int)((error*GP) + (integral *GI) + (derivative*GD));
 
-		if(pwm_duty < PWM_STEPDC_MIN){
-		   pwm_duty = PWM_STEPDC_MIN;
-		   min_counts++;
-		}
-		if(pwm_duty > PWM_STEPDC_MAX){
-			pwm_duty = PWM_STEPDC_MAX;
-			max_counts++;
-		}
-		//CHECK STATUS
+		// Set the duty cycle based on the calculated value
+		if (pwm_duty < PWM_STEPDC_MIN)
+			pwm_duty = PWM_STEPDC_MIN;
+		else if (pwm_duty > PWM_STEPDC_MAX)
+			pwm_duty = PWM_STEPDC_MIN;
+
 		Status = PWM_SetParams(&PWMTimerInst, pwm_freq, pwm_duty);
-		if (Status == XST_SUCCESS) {
-			PWM_Start(&PWMTimerInst);
-		} else {
-			return -1;
-		}
+		if (Status == XST_SUCCESS)
+		  	PWM_Start(&PWMTimerInst);
+		else
+		  	return -1;
 
-		//store in array
 		sample[smpl_idx++] = adc_cnt;
 		n++;
+		delay_msecs(5);
 	}
 	adc_smple_interval = (timestamp - tss) / smpl_idx;
-	LCD_setcursor(1, 0);
-	LCD_wrstring("Max:");
-	LCD_setcursor(1, 4);
-	LCD_putnum(max_counts, 10);
-	LCD_setcursor(2, 0);
-	LCD_wrstring("Min:");
-	LCD_setcursor(2, 4);
-	LCD_putnum(min_counts, 10);
-
 	return n;
-
 }
 
 /*****
