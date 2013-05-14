@@ -1,0 +1,3 @@
+PROCESSOR=microblaze_0
+REPOSITORIES=-lp C:/544projects/ECE544_Repository_14_4/ECE544_Repository_14_4/MyProcessorIPLib
+HWSPEC=../embsys_hw_platform/system.xml
